@@ -100,15 +100,17 @@ export default function AttendanceInfo({
   return (
     <div className={'mt-6 w-full'}>
       <div className="mb-6 text-lg leading-relaxed text-lightslategray">
-        The main event spans two days (April 10th - April 11th, 2025), with the
-        first day in person and the following day entirely virtual.
+        The main event spans three days (May 28th - May 30th, 2025), with the
+        first day <b className={'text-secondary-500 underline'}>online</b> and
+        the following days entirely{' '}
+        <b className={'text-secondary-500 underline'}>In-Person</b>.
         <br />
         <br />
         The plans to participate in the event are as follows:
         <br />
         <ul className="list-outside list-disc pl-[1.5em]">
-          <li>In person</li>
-          <li>Online</li>
+          <li>Hackathon</li>
+          <li>Hackathon + Two days lunch</li>
         </ul>
       </div>
       <div
