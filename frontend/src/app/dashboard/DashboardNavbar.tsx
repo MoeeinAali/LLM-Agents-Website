@@ -77,8 +77,7 @@ export default function DashboardNavbar({
         {/*    Optional*/}
         {/*  </span>*/}
         {/*</div>*/}
-        {
-          !registered &&
+        {!registered && (
           <div
             className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
               isRegister ? 'border-b-primary' : undefined
@@ -102,7 +101,7 @@ export default function DashboardNavbar({
               Registration
             </Link>
           </div>
-        }
+        )}
 
         {registered && (
           <div
