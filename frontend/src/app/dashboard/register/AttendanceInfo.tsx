@@ -130,11 +130,7 @@ export default function AttendanceInfo({
                   className={'flex flex-col items-center justify-center'}
                 >
                   <label
-                    className={`flex items-center gap-x-2 ${
-                      modeOfAttendance.name.includes('Person')
-                        ? 'line-through opacity-60'
-                        : ''
-                    }`}
+                    className={`flex items-center gap-x-2`}
                   >
                     <input
                       type={'radio'}
@@ -142,8 +138,8 @@ export default function AttendanceInfo({
                       name={'modeOfAttendance'}
                       value={modeOfAttendance.id}
                       disabled={
-                        modesOfAttendance[selectedModeIndex]?.paid ||
-                        modeOfAttendance.name.includes('Person')
+                        modesOfAttendance[selectedModeIndex]?.paid
+                        // modeOfAttendance.name.includes('Person')
                       }
                       defaultChecked={
                         modesOfAttendance[selectedModeIndex]?.id ===
@@ -156,9 +152,9 @@ export default function AttendanceInfo({
                       {(modeOfAttendance.price ?? 0).toLocaleString()} Tooman
                     </span>
                   </label>
-                  {modeOfAttendance.name.includes('Person') && (
-                    <span>Capacity is full</span>
-                  )}
+                  {/*{modeOfAttendance.name.includes('Person') && (*/}
+                  {/*  <span>Capacity is full</span>*/}
+                  {/*)}*/}
                 </span>
               ) : null,
             )}
@@ -186,7 +182,7 @@ export default function AttendanceInfo({
                   {'lunch'} - {''}
                   {(
                     modesOfAttendance[lunchIndex].price -
-                      modesOfAttendance[inPersonIndex].price ?? 0
+                    modesOfAttendance[inPersonIndex].price
                   ).toLocaleString()}{' '}
                   Tooman
                 </span>

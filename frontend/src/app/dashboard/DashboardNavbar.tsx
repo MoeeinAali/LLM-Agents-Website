@@ -47,37 +47,38 @@ export default function DashboardNavbar({
             Profile
           </Link>
         </div>
-        <div
-          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-            isPosterSession ? 'border-b-primary' : undefined
-          }`}
-        >
-          <Image
-            width={24}
-            height={24}
-            className={`${
-              isPosterSession ? 'filter-primary' : undefined
-            } h-6 w-6 max-md:h-5 max-md:w-5`}
-            src="/source/ic_wallpaper_48px.svg"
-            alt=""
-          />
-          <Link
-            href="/dashboard/posterSession"
-            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-              isPosterSession ? 'text-primary' : 'text-darkslategray-100'
-            }`}
-          >
-            Poster Session
-          </Link>
-          <span
-            className={`${
-              isPosterSession ? 'bg-secondary' : 'bg-darkslategray-100'
-            } rounded-full border-2 px-1.5 py-0.5 text-[10px] font-bold text-white`}
-          >
-            Optional
-          </span>
-        </div>
-        {!registered && (
+        {/*<div*/}
+        {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*    isPosterSession ? 'border-b-primary' : undefined*/}
+        {/*  }`}*/}
+        {/*>*/}
+        {/*  <Image*/}
+        {/*    width={24}*/}
+        {/*    height={24}*/}
+        {/*    className={`${*/}
+        {/*      isPosterSession ? 'filter-primary' : undefined*/}
+        {/*    } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*    src="/source/ic_wallpaper_48px.svg"*/}
+        {/*    alt=""*/}
+        {/*  />*/}
+        {/*  <Link*/}
+        {/*    href="/dashboard/posterSession"*/}
+        {/*    className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*      isPosterSession ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    Poster Session*/}
+        {/*  </Link>*/}
+        {/*  <span*/}
+        {/*    className={`${*/}
+        {/*      isPosterSession ? 'bg-secondary' : 'bg-darkslategray-100'*/}
+        {/*    } rounded-full border-2 px-1.5 py-0.5 text-[10px] font-bold text-white`}*/}
+        {/*  >*/}
+        {/*    Optional*/}
+        {/*  </span>*/}
+        {/*</div>*/}
+        {
+          // !registered &&
           <div
             className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
               isRegister ? 'border-b-primary' : undefined
@@ -101,31 +102,31 @@ export default function DashboardNavbar({
               Registration
             </Link>
           </div>
-        )}
+        }
 
-        <div
-          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-            isStream ? 'border-b-primary' : undefined
-          }`}
-        >
-          <Image
-            width={24}
-            height={24}
-            className={`${
-              isStream ? 'filter-primary' : undefined
-            } h-6 w-6 max-md:h-5 max-md:w-5`}
-            src="/source/stream.svg"
-            alt=""
-          />
-          <Link
-            href="/dashboard/stream"
-            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-              isStream ? 'text-primary' : 'text-darkslategray-100'
-            }`}
-          >
-            Stream
-          </Link>
-        </div>
+        {/*<div*/}
+        {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*    isStream ? 'border-b-primary' : undefined*/}
+        {/*  }`}*/}
+        {/*>*/}
+        {/*  <Image*/}
+        {/*    width={24}*/}
+        {/*    height={24}*/}
+        {/*    className={`${*/}
+        {/*      isStream ? 'filter-primary' : undefined*/}
+        {/*    } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*    src="/source/stream.svg"*/}
+        {/*    alt=""*/}
+        {/*  />*/}
+        {/*  <Link*/}
+        {/*    href="/dashboard/stream"*/}
+        {/*    className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*      isStream ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    Stream*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
 
         {/*<div*/}
         {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
@@ -151,29 +152,29 @@ export default function DashboardNavbar({
         {/*  </Link>*/}
         {/*</div>*/}
 
-        <div
-          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-            isCertificates ? 'border-b-primary' : undefined
-          }`}
-        >
-          <Image
-            width={24}
-            height={24}
-            className={`${
-              isCertificates ? 'filter-primary' : undefined
-            } h-6 w-6 max-md:h-5 max-md:w-5`}
-            src="/source/certificate.svg"
-            alt=""
-          />
-          <Link
-            href="/dashboard/certificates"
-            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-              isCertificates ? 'text-primary' : 'text-darkslategray-100'
-            }`}
-          >
-            Certificates
-          </Link>
-        </div>
+        {/*<div*/}
+        {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*    isCertificates ? 'border-b-primary' : undefined*/}
+        {/*  }`}*/}
+        {/*>*/}
+        {/*  <Image*/}
+        {/*    width={24}*/}
+        {/*    height={24}*/}
+        {/*    className={`${*/}
+        {/*      isCertificates ? 'filter-primary' : undefined*/}
+        {/*    } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*    src="/source/certificate.svg"*/}
+        {/*    alt=""*/}
+        {/*  />*/}
+        {/*  <Link*/}
+        {/*    href="/dashboard/certificates"*/}
+        {/*    className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*      isCertificates ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    Certificates*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
       </div>
       <LogoutButton />
     </div>
