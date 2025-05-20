@@ -184,7 +184,7 @@ export default function Header({ isAuthenticated = false }) {
           </a>
           <a href="https://sotoon.ir/">
             <img
-              src="/source/logos/sotoon.svg"
+              src="/source/logos/sotoon.svg?v=2"
               className="m-auto m-auto w-full w-full max-w-[55px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
@@ -196,19 +196,19 @@ export default function Header({ isAuthenticated = false }) {
           </a>
           <a href="https://khodro45.com/">
             <img
-              src="/source/logos/khodro45.svg"
+              src="/source/logos/khodro45.svg?v=2"
               className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://www.jabama.com/">
             <img
-              src="/source/logos/jabama.svg"
+              src="/source/logos/jabama.svg?v=2"
               className="m-auto m-auto w-full w-full max-w-[51px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="/">
             <img
-              src="/source/logos/center.svg"
+              src="/source/logos/center.svg?v=2"
               className="m-auto m-auto w-full w-full max-w-[71px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>

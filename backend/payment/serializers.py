@@ -51,17 +51,17 @@ def validate_plans(attrs, is_price=True):
         raise serializers.ValidationError('Invalid discount code from multiple events')
 
     # Limit for In Person registrations
-    for plan in plans:
-        if plan.kind == 'M' and plan.mode_of_attendance.name.startswith('In Person'):
-            current_registered = Participation.objects.filter(
-                plan__kind='M',
-                plan__mode_of_attendance__name__startswith='In Person',
-                plan__event=event
-            ).count()
-            if current_registered > settings.IN_PERSON_LIMIT:
-                raise serializers.ValidationError(
-                    'This mode of attendance is not available right now due to Registration Limits'
-                )
+#     for plan in plans:
+#         if plan.kind == 'M' and plan.mode_of_attendance.name.startswith('In Person'):
+#             current_registered = Participation.objects.filter(
+#                 plan__kind='M',
+#                 plan__mode_of_attendance__name__startswith='In Person',
+#                 plan__event=event
+#             ).count()
+#             if current_registered > settings.IN_PERSON_LIMIT:
+#                 raise serializers.ValidationError(
+#                     'This mode of attendance is not available right now due to Registration Limits'
+#                 )
 
     if not is_price:
         participant = attrs.get('participant', None)
