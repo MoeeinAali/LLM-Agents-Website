@@ -27,7 +27,7 @@ func main() {
 	// Create the data needed
 	endpointApi := new(api.API)
 	endpointApi.Database = setupDatabase()
-	endpointApi.PaymentService = getZibal()
+	endpointApi.PaymentService = getZarinpal()
 	defer endpointApi.Database.Close()
 	// Setup endpoints
 	r := gin.New()
