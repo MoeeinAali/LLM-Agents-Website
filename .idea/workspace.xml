@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="staff">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="sag 2 mehrab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/WSS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/WSS/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/landing/roundtables.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/landing/roundtables.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/landing/seminars.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/landing/seminars.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/source/logos/jabama.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/source/logos/jabama.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/source/logos/khodro45.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/source/logos/khodro45.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/source/logos/sotoon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/source/logos/sotoon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/about/TeamSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/TeamSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/seminars/SeminarCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/seminars/SeminarCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Programs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Programs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/staff/StaffCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/staff/StaffCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,7 @@
       <workItem from="1747703440533" duration="803000" />
       <workItem from="1747717546776" duration="4272000" />
       <workItem from="1747722766151" duration="869000" />
-      <workItem from="1747728544576" duration="2950000" />
+      <workItem from="1747728544576" duration="6478000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -171,7 +167,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747722992690</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sag 2 mehrab">
+      <option name="closed" value="true" />
+      <created>1747731732227</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747731732227</updated>
+    </task>
+    <task id="LOCAL-00012" summary="sag 2 mehrab">
+      <option name="closed" value="true" />
+      <created>1747731755821</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747731755821</updated>
+    </task>
+    <task id="LOCAL-00013" summary="sag 2 mehrab">
+      <option name="closed" value="true" />
+      <created>1747731817326</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747731817326</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +216,7 @@
     <MESSAGE value="sag to zarin" />
     <MESSAGE value="sag to gtag" />
     <MESSAGE value="staff" />
-    <option name="LAST_COMMIT_MESSAGE" value="staff" />
+    <MESSAGE value="sag 2 mehrab" />
+    <option name="LAST_COMMIT_MESSAGE" value="sag 2 mehrab" />
   </component>
 </project>

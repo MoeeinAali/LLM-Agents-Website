@@ -185,7 +185,7 @@ export default function Header({ isAuthenticated = false }) {
           <a href="https://sotoon.ir/">
             <img
               src="/source/logos/sotoon.svg"
-              className="m-auto m-auto w-full w-full max-w-[45px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto w-full w-full max-w-[55px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://zharfa.tech/">
@@ -197,13 +197,19 @@ export default function Header({ isAuthenticated = false }) {
           <a href="https://khodro45.com/">
             <img
               src="/source/logos/khodro45.svg"
-              className="m-auto m-auto w-full w-full max-w-[75px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://www.jabama.com/">
             <img
               src="/source/logos/jabama.svg"
-              className="m-auto m-auto w-full w-full max-w-[85px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto w-full w-full max-w-[51px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="/">
+            <img
+              src="/source/logos/center.svg"
+              className="m-auto m-auto w-full w-full max-w-[71px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
         </div>

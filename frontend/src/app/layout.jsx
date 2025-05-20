@@ -34,7 +34,10 @@ export default function RootLayout({ children }) {
           content="LLM Agents Hackathon. The event is held by the Sharif Artificial Intelligence Chapter
               (SAIC) of Sharif University of Technology."
         />
-        <meta property="og:image" content="https://llm-agents.ir/preview.png" />
+        <meta
+          property="og:image"
+          content="https://llm-agents.ir/preview.png?v=2"
+        />
         <meta property="og:url" content="https://llm-agents.ir/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fa_IR" />

@@ -30,29 +30,33 @@ export default async function AboutUs() {
                 About Us
               </p>
               <p className="flex items-center justify-center gap-[13px] pb-4 pt-10 text-lg leading-relaxed text-neutral-400">
-                The Winter Seminar Series (WSS) has been established to bring
-                together successful Iranians from around the world and build a
-                professional community focused on computer science and
-                engineering topics. Over the years, this seminar has grown to
-                become one of the premier events at the Sharif University of
-                Technology. WSS is open to anyone who works in or is interested
-                in computer science topics and seeks to share and express their
-                ideas and research.
+                The LLM Agent Hackathon has been launched to bring together
+                researchers, students, and professionals with a shared interest
+                in the rapidly evolving world of intelligent systems. With a
+                specific focus on Large Language Model (LLM) agents, this event
+                marks the beginning of a new series aimed at fostering technical
+                growth and innovation in this cutting-edge field.
               </p>
               <p className="flex items-center justify-center gap-[13px] py-4 text-lg leading-relaxed text-neutral-400">
-                WSS was initiated {new Date().getFullYear() - 2024} years ago by
-                the Student Scientific Chapter at Sharif University of
-                Technology as a global effort to connect expert researchers.
-                Currently, WSS is held as a two-day event where speakers present
-                their research and ideas each day, while also sharing their
-                findings and teaching related topics.
+                This inaugural event is inspired by the growing global attention
+                toward LLM agents, as highlighted in Ilya Sutskever’s prediction
+                that 2025 will be the year of agentic AI. In response, we have
+                created a two-day experience combining expert presentations and
+                a dynamic hackathon.
               </p>
               <p className="flex items-center justify-center gap-[13px] py-4 text-lg leading-relaxed text-neutral-400">
-                This event comprises presentations and roundtable discussions
-                covering various science and engineering topics. It provides a
-                platform for networking and exchange of knowledge among
-                participants with a shared interest in computer science and
-                engineering.
+                On the first day, speakers from MIT, Sharif University of
+                Technology, and industry leaders will share their latest
+                research and insights into LLM-based systems. The second day is
+                devoted to the hackathon, where participants will collaborate on
+                creative problem-solving with guidance from a team of expert
+                mentors.
+              </p>
+              <p className="flex items-center justify-center gap-[13px] py-4 text-lg leading-relaxed text-neutral-400">
+                Organized by the Student Scientific Chapter at Sharif University
+                of Technology, the LLM Agent Hackathon provides a unique
+                platform for learning, building, and connecting around one of
+                the most promising frontiers in AI.
               </p>
             </div>
           </div>

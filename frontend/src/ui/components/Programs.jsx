@@ -40,9 +40,16 @@ const items = [
     title: 'Hackathon',
     overline: 'Build. Compete. Innovate',
     img: '/landing/roundtables.jpg',
+    desc: 'The second day shifts from theory to action. Participants will team up and compete in a hands-on hackathon centered around challenges ideal for LLM agent-based solutions. A strong mentorship team—comprising experienced researchers, engineers, and AI practitioners—will be available throughout the event to guide teams, help refine problem ideas, and support implementation.',
+  },
+  {
+    id: 3,
+    title: 'Final-Presentations & Awards',
+    overline: 'Demo. Showcase. Celebrate',
+    img: '/landing/roundtables.jpg',
     desc:
-      'The second day shifts from theory to action. Participants will team up and compete in a hands-on hackathon centered around challenges ideal for LLM agent-based solutions. A strong mentorship team—comprising experienced researchers, engineers, and AI practitioners—will be available throughout the event to guide teams, help refine problem ideas, and support implementation.\n' +
-      'This is where creativity meets capability—teams will build innovative solutions, showcase their ideas, and impress the judges. Prizes will be awarded to the most outstanding projects at the end of the day.',
+      "The third day is all about showcasing what you've built. Each team will present their solution in a demo session before our panel of expert judges—composed of faculty, industry professionals, and AI researchers. This is your opportunity to communicate not only what your solution does, but why it matters.\n" +
+      "Judges will evaluate projects based on creativity, impact, technical execution, and alignment with LLM agent capabilities. After the demos, we’ll conclude with an awards ceremony celebrating the top-performing teams and their outstanding contributions.This final stage is more than just competition—it's a celebration of ideas, effort, and innovation.",
   },
 ];
 
@@ -85,7 +92,7 @@ function ItemText({ title, overline, description }) {
       <div className="text-5xl font-bold leading-normal text-slate-800">
         {title}
       </div>
-      <div className="mt-2.5 text-justify text-lg leading-relaxed text-neutral-400">
+      <div style={{ textAlign: "justify" }} className="mt-2.5 text-lg leading-relaxed text-neutral-500">
         {description}
       </div>
     </div>
@@ -109,7 +116,7 @@ function ItemTag({ item }) {
         item.id % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
     >
-      <ItemImg img={item.img} />
+      {/*<ItemImg img={item.img} />*/}
       <ItemText
         title={item.title}
         overline={item.overline}
