@@ -129,9 +129,7 @@ export default function AttendanceInfo({
                   key={modeOfAttendance.id}
                   className={'flex flex-col items-center justify-center'}
                 >
-                  <label
-                    className={`flex items-center gap-x-2`}
-                  >
+                  <label className={`flex items-center gap-x-2`}>
                     <input
                       type={'radio'}
                       id={modeOfAttendance.name}
