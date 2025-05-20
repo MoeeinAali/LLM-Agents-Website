@@ -26,7 +26,7 @@ const formatTime = (time: Date) => {
 
 export default function SeminarCard({ seminar }: { seminar: Seminar }) {
   return (
-    <Link href={`/presentations/${seminar.id}`}>
+    <Link href={`/seminars/${seminar.id}`}>
       <div
         className={
           'flex w-fit flex-col items-center justify-between overflow-hidden px-1'
