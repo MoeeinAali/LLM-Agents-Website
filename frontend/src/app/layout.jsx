@@ -28,10 +28,11 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/*Open Graph Meta Tags */}
-        <meta property="og:title" content="Winter Seminar Series" />
+        <meta property="og:title" content="LLM Agents Hackathon" />
         <meta
           property="og:description"
-          content="The Winter Seminar Series (WSS) has been established to bring together successful Iranians from around the world and build a professional community focused on computer science and engineering topics. Over the years, this seminar has grown to become one of the premier events at the Sharif University of Technology. WSS is open to anyone who works in or is interested in computer science topics and seeks to share and express their ideas and research."
+          content="LLM Agents Hackathon. The event is held by the Sharif Artificial Intelligence Chapter
+              (SAIC) of Sharif University of Technology."
         />
         <meta property="og:image" content="https://llm-agents.ir/preview.png" />
         <meta property="og:url" content="https://llm-agents.ir/" />

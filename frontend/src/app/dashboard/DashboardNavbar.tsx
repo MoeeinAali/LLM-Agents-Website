@@ -33,7 +33,7 @@ export default function DashboardNavbar({
             width={24}
             height={24}
             className={`${
-              isProfile ? 'filter-primary' : undefined
+              isProfile ? '' : undefined
             } h-6 w-6 max-md:h-5 max-md:w-5`}
             src="/source/Profile.svg"
             alt=""
@@ -88,7 +88,7 @@ export default function DashboardNavbar({
               width={24}
               height={24}
               className={`${
-                isRegister ? 'filter-primary' : undefined
+                isRegister ? '' : undefined
               } h-6 w-6 max-md:h-5 max-md:w-5`}
               src="/source/TicketStar.svg"
               alt=""

@@ -282,7 +282,7 @@ export default function ProfileForm({
                 id="male"
                 name="gender"
                 value="M"
-                className="h-3 w-3 shrink-0 accent-primary-400"
+                className="h-3 w-3 shrink-0 accent-primary"
                 defaultChecked={profile.gender === Gender.MALE}
               />
               <label
@@ -297,7 +297,7 @@ export default function ProfileForm({
                 id="female"
                 name="gender"
                 value="F"
-                className="h-3 w-3 shrink-0 accent-primary-400"
+                className="h-3 w-3 shrink-0 accent-primary"
                 defaultChecked={profile.gender === Gender.FEMALE}
               />
               <label
@@ -594,61 +594,61 @@ export default function ProfileForm({
               />
             </div>
           </div>
-          <button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-[#342B4C] px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">
+          <button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-secondary px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">
             Update Profile
           </button>
-          <div className="flex flex-col items-start gap-5 self-stretch">
-            <label className="text-4xl font-bold not-italic leading-[normal] tracking-[-0.72px] text-[#1F2B3D]">
-              Password Change
-            </label>
-            <div className="flex items-start gap-6 self-stretch max-md:flex-col">
-              <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">
-                <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">
-                  Current Password
-                </label>
-                <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">
-                  <input
-                    className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"
-                    type="password"
-                    autoComplete="current-password"
-                    id="currentPass"
-                    minLength={3}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">
-                <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">
-                  New Password
-                </label>
-                <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">
-                  <input
-                    className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"
-                    type="password"
-                    autoComplete="new-password"
-                    id="newPass"
-                    minLength={3}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">
-                <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">
-                  confirm new Password
-                </label>
-                <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">
-                  <input
-                    className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"
-                    type="password"
-                    autoComplete="new-password"
-                    id="confirmNewPass"
-                    minLength={3}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-[#342B4C] px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">
-            Update Password
-          </button>
+          {/*<div className="flex flex-col items-start gap-5 self-stretch">*/}
+          {/*  <label className="text-4xl font-bold not-italic leading-[normal] tracking-[-0.72px] text-[#1F2B3D]">*/}
+          {/*    Password Change*/}
+          {/*  </label>*/}
+          {/*  <div className="flex items-start gap-6 self-stretch max-md:flex-col">*/}
+          {/*    <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">*/}
+          {/*      <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">*/}
+          {/*        Current Password*/}
+          {/*      </label>*/}
+          {/*      <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">*/}
+          {/*        <input*/}
+          {/*          className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"*/}
+          {/*          type="password"*/}
+          {/*          autoComplete="current-password"*/}
+          {/*          id="currentPass"*/}
+          {/*          minLength={3}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*    <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">*/}
+          {/*      <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">*/}
+          {/*        New Password*/}
+          {/*      </label>*/}
+          {/*      <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">*/}
+          {/*        <input*/}
+          {/*          className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"*/}
+          {/*          type="password"*/}
+          {/*          autoComplete="new-password"*/}
+          {/*          id="newPass"*/}
+          {/*          minLength={3}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*    <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">*/}
+          {/*      <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">*/}
+          {/*        confirm new Password*/}
+          {/*      </label>*/}
+          {/*      <div className="flex items-center gap-2 self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4">*/}
+          {/*        <input*/}
+          {/*          className="w-full text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"*/}
+          {/*          type="password"*/}
+          {/*          autoComplete="new-password"*/}
+          {/*          id="confirmNewPass"*/}
+          {/*          minLength={3}*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+          {/*<button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-[#342B4C] px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">*/}
+          {/*  Update Password*/}
+          {/*</button>*/}
         </div>
       </form>
     </>
