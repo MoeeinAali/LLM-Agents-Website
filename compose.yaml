@@ -1,0 +1,41 @@
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  postgresql:
+    image: docker.arvancloud.ir/postgres
+    container_name: postgres
+    networks:
+      - app-network
+    env_file:
+      - .env.postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data 
+
+  payment:
+    image: wss:payment
+    container_name: payment
+    networks:
+      - app-network
+    restart: on-failure
+    env_file:
+      - .env.payment
+    depends_on:
+      - postgresql
+
+  backend:
+    image: wss:backend
+    container_name: backend
+    networks:
+      - app-network
+    depends_on:
+      - postgresql
+    ports:
+      - 8000:8000
+    env_file:
+      - .env.backend
+
+volumes:
+  postgres-data:
+    driver: local

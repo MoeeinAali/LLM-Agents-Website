@@ -1,0 +1,12 @@
+Django==4.2.8
+gunicorn
+djangorestframework
+djangorestframework-simplejwt
+django-storages[s3]
+python-dotenv~=1.0.0
+Pillow
+django-cors-headers
+psycopg
+requests
+drf-standardized-errors
+s3transfer==0.10.4
