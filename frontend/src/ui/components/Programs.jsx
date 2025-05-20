@@ -92,7 +92,10 @@ function ItemText({ title, overline, description }) {
       <div className="text-5xl font-bold leading-normal text-slate-800">
         {title}
       </div>
-      <div style={{ textAlign: "justify" }} className="mt-2.5 text-lg leading-relaxed text-neutral-500">
+      <div
+        style={{ textAlign: 'justify' }}
+        className="mt-2.5 text-lg leading-relaxed text-neutral-500"
+      >
         {description}
       </div>
     </div>
