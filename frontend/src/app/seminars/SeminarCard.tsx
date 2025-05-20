@@ -34,7 +34,7 @@ export default function SeminarCard({ seminar }: { seminar: Seminar }) {
       >
         <div className="relative z-10 mx-auto h-[231px] w-[347px] overflow-hidden rounded-lg bg-cover">
           <img
-            src={seminar?.thumbnail ?? '/source/dashboard/register/sample.svg'}
+            src={seminar?.thumbnail ?? '/default_seminar.png'}
             alt={seminar?.name}
             className="z-0 w-full"
           />

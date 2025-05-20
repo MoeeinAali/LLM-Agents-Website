@@ -30,24 +30,19 @@ Programs.propTypes = {
 const items = [
   {
     id: 1,
-    title: 'Seminars',
-    overline: 'A two-day journey of discovery and learning',
+    title: 'Insight Sessions',
+    overline: 'Uncovering the Future with Experts',
     img: '/landing/seminars.jpg',
-    desc: 'The seminars comprise a two-day event where speakers present their research and ideas, sharing their findings and teaching related topics. Each day of the event features different speakers and topics, providing participants with a diverse range of perspectives and knowledge.',
+    desc: 'The first day of the event is dedicated to thought leadership and knowledge sharing. Dive into the evolving landscape of AI with a series of inspiring talks and interactive sessions led by top minds from both academia and industry. Learn how Large Language Model (LLM) agents are shaping the future—from real-world use cases to cutting-edge research—and prepare yourself for the challenges of Day 2.',
   },
   {
     id: 2,
-    title: 'Round Tables',
-    overline: 'A deep dive into expert-led discussions',
+    title: 'Hackathon',
+    overline: 'Build. Compete. Innovate',
     img: '/landing/roundtables.jpg',
-    desc: "During the event, we host round table discussions on specific topics, inviting experts in the field to share their insights and engage with participants' concerns. Please note that the round tables are conducted in Persian.",
-  },
-  {
-    id: 3,
-    title: 'Poster-Sessions',
-    overline: 'Exploring education at the core',
-    img: '/landing/posterSession.jpg ',
-    desc: 'This section features a series of poster sessions where participants present and discuss their ideas, research findings, or technical projects. These sessions are held in person, providing an interactive platform for knowledge sharing, receiving feedback, and fostering collaboration in various fields of computer science and engineering.',
+    desc:
+      'The second day shifts from theory to action. Participants will team up and compete in a hands-on hackathon centered around challenges ideal for LLM agent-based solutions. A strong mentorship team—comprising experienced researchers, engineers, and AI practitioners—will be available throughout the event to guide teams, help refine problem ideas, and support implementation.\n' +
+      'This is where creativity meets capability—teams will build innovative solutions, showcase their ideas, and impress the judges. Prizes will be awarded to the most outstanding projects at the end of the day.',
   },
 ];
 

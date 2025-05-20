@@ -63,7 +63,7 @@ export default async function AboutUs() {
       </div>
 
       <StaffArea />
-      {staffTeams.map((staffTeam) => (
+      {staffTeams.reverse().map((staffTeam) => (
         <TeamSection
           sort={true}
           key={staffTeam.id}

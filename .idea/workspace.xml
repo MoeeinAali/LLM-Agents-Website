@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="sag to gtag">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="staff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/WSS/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/WSS/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/landing/roundtables.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/landing/roundtables.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/landing/seminars.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/landing/seminars.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/about/TeamSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/TeamSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/seminars/SeminarCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/seminars/SeminarCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Programs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Programs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/staff/StaffCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/staff/StaffCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,27 +37,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Github/LLM-Agents-Website/frontend/src/app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Github/LLM-Agents-Website/frontend/public/landing",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\LLM-Agents-Website\frontend\public\landing" />
+      <recent name="D:\Github\LLM-Agents-Website\frontend\public" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\src\app" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\Winter-Seminar-Series\WSS-site\frontend\public\source\sponsors" />
@@ -76,7 +88,8 @@
       <workItem from="1747701230129" duration="2112000" />
       <workItem from="1747703440533" duration="803000" />
       <workItem from="1747717546776" duration="4272000" />
-      <workItem from="1747722766151" duration="160000" />
+      <workItem from="1747722766151" duration="869000" />
+      <workItem from="1747728544576" duration="2950000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -150,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747721794476</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="staff">
+      <option name="closed" value="true" />
+      <created>1747722992690</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747722992690</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +195,7 @@
     <MESSAGE value="sag" />
     <MESSAGE value="sag to zarin" />
     <MESSAGE value="sag to gtag" />
-    <option name="LAST_COMMIT_MESSAGE" value="sag to gtag" />
+    <MESSAGE value="staff" />
+    <option name="LAST_COMMIT_MESSAGE" value="staff" />
   </component>
 </project>

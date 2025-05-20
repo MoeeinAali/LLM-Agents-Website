@@ -30,10 +30,13 @@ export default function TeamSection({
       <div className="flex flex-wrap justify-center gap-8">
         {staff
           .slice()
-          .reverse()
           .sort((a, b) => {
             if (!sort) {
               return 1;
+            }
+            //TODO: Hard codeeeeee
+            if (a.name.includes('Rohban')) {
+              return -1;
             }
 
             const aPriority = priorityKeywords.findIndex((keyword) =>

@@ -129,6 +129,8 @@ export default function ProfileForm({
         action={async (data) => {
           setError('');
           setSuccessful(false);
+          data.set('github', '');
+          data.set('linkedin', '');
           data.set(
             'city',
             typeof selectedProvince === 'string'
@@ -421,7 +423,9 @@ export default function ProfileForm({
               </label>
               <label className="flex items-center gap-2 px-0 py-1 text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]">
                 <input
-                  defaultChecked={profile.isOpenToWork}
+                  defaultChecked={
+                    profile.isOpenToWork ? false : profile.isOpenToWork
+                  }
                   type="checkbox"
                   id="openToWork"
                   name="isOpenToWork"
@@ -567,33 +571,33 @@ export default function ProfileForm({
               </div>
             </div>
           </div>
-          <div className="flex items-start gap-6 self-stretch max-md:flex-col">
-            <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">
-              <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">
-                Linkedin
-              </label>
-              <input
-                className="w-full self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4 text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"
-                id="linkedin"
-                minLength={3}
-                defaultValue={profile.linkedin}
-                name="linkedin"
-              />
-            </div>
-            <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">
-              <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">
-                github
-              </label>
-              <input
-                className="w-full self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4 text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"
-                id="github"
-                minLength={3}
-                defaultValue={profile.github}
-                name="github"
-                aria-autocomplete={'none'}
-              />
-            </div>
-          </div>
+          {/*<div className="flex items-start gap-6 self-stretch max-md:flex-col">*/}
+          {/*  <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">*/}
+          {/*    <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">*/}
+          {/*      Linkedin*/}
+          {/*    </label>*/}
+          {/*    <input*/}
+          {/*      className="w-full self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4 text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"*/}
+          {/*      id="linkedin"*/}
+          {/*      minLength={3}*/}
+          {/*      defaultValue={profile.linkedin}*/}
+          {/*      name="linkedin"*/}
+          {/*    />*/}
+          {/*  </div>*/}
+          {/*  <div className="flex flex-[1_0_0] flex-col items-start gap-[9px] self-stretch">*/}
+          {/*    <label className="text-base font-medium uppercase not-italic leading-[normal] tracking-[0.64px] text-[#8A8998]">*/}
+          {/*      github*/}
+          {/*    </label>*/}
+          {/*    <input*/}
+          {/*      className="w-full self-stretch rounded-lg border border-solid border-[rgba(138,137,152,0.30)] px-5 py-4 text-lg font-semibold not-italic leading-[normal] tracking-[-0.18px] text-[#1F2B3D]"*/}
+          {/*      id="github"*/}
+          {/*      minLength={3}*/}
+          {/*      defaultValue={profile.github}*/}
+          {/*      name="github"*/}
+          {/*      aria-autocomplete={'none'}*/}
+          {/*    />*/}
+          {/*  </div>*/}
+          {/*</div>*/}
           <button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-secondary px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">
             Update Profile
           </button>

@@ -88,53 +88,30 @@ export default function Header({ isAuthenticated = false }) {
               </div>
             </div>
           </div>
-          <div className="max-lg:grid-rows-auto grid grid-cols-2 gap-x-16 gap-y-6 text-end max-lg:grid-cols-2 max-lg:text-start">
-            <div className="shrink-0 max-lg:w-1/2">
-              <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                46+
-              </p>
-              <p className="text-white text-opacity-80 max-lg:text-sm">
-                Workshops in all series.
-              </p>
-            </div>
+
+          <div className="max-lg:grid-rows-auto grid grid-cols-1 items-start gap-x-16 gap-y-6 text-end max-lg:grid-cols-2 max-lg:text-start">
             <div className="pr shrink-0 max-lg:w-1/2">
               <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                4500+
+                300+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Participants in all series.
+                Participants
               </p>
             </div>
             <div className="shrink-0 max-lg:w-1/2">
               <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                38+
+                5+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Poster-Sessions in all series.
+                Presentations
               </p>
             </div>
             <div className="shrink-0 max-lg:w-1/2">
               <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                250+
+                2+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Presentations in all series.
-              </p>
-            </div>
-            <div className="shrink-0 max-lg:w-1/2">
-              <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                8+
-              </p>
-              <p className="text-white text-opacity-80 max-lg:text-sm">
-                Lab-Talks in all series.
-              </p>
-            </div>
-            <div className="shrink-0 max-lg:w-1/2">
-              <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                19+
-              </p>
-              <p className="text-white text-opacity-80 max-lg:text-sm">
-                Round-Tables in all series.
+                Days Hackathon
               </p>
             </div>
           </div>
