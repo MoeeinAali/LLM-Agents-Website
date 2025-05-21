@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="registration page">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="fix back">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,25 +26,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/Github/LLM-Agents-Website/frontend/public/landing",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/LLM-Agents-Website/frontend/public/landing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\landing" />
@@ -80,6 +79,8 @@
       <workItem from="1747717546776" duration="4272000" />
       <workItem from="1747722766151" duration="869000" />
       <workItem from="1747728544576" duration="9626000" />
+      <workItem from="1747765555641" duration="264000" />
+      <workItem from="1747813701322" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -209,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747746992318</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix back">
+      <option name="closed" value="true" />
+      <created>1747765605255</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1747765605255</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix back">
+      <option name="closed" value="true" />
+      <created>1747765700956</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1747765700956</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +254,7 @@
     <MESSAGE value="sag 2 mehrab" />
     <MESSAGE value="sag 2 mehrab 2" />
     <MESSAGE value="registration page" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration page" />
+    <MESSAGE value="fix back" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix back" />
   </component>
 </project>

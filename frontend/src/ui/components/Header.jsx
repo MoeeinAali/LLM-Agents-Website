@@ -190,8 +190,8 @@ export default function Header({ isAuthenticated = false }) {
           </a>
           <a href="https://zharfa.tech/">
             <img
-              src="/source/logos/zarfatech.svg"
-              className="m-auto m-auto w-full w-full max-w-[61px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/source/logos/zarfatech2.svg"
+              className="m-auto m-auto w-full w-full max-w-[55px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://khodro45.com/">
