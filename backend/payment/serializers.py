@@ -244,7 +244,7 @@ class PaymentRequestCreateSerializer(serializers.ModelSerializer):
                     info=info,
                     spotplayer_license=license if plan.spotplayer_course is not None else None
                 )
-            return 'https://wss-sharif.com/dashboard/profile'
+            return 'https://llm-agents.ir/dashboard/profile'
         url = settings.PAYMENT_SERVICE_URL + '/transaction'
         logger.info('Payment request for participant %d, total price: %d, calculated price: %d', participant.id, total_price, calculated_price)
         logger.info(f'sending request to {url}')
