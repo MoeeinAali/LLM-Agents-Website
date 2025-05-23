@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="fix back">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="kir 2 wss9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/AdvisorCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/AdvisorCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/Advisors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/Advisors.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +36,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Github/LLM-Agents-Website/frontend/public/landing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/LLM-Agents-Website/frontend/public/source/logos&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,10 +50,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\landing" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\src\app" />
-      <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\Winter-Seminar-Series\WSS-site\frontend\public\source\sponsors" />
     </key>
   </component>
@@ -81,6 +84,9 @@
       <workItem from="1747728544576" duration="9626000" />
       <workItem from="1747765555641" duration="264000" />
       <workItem from="1747813701322" duration="15000" />
+      <workItem from="1747831242539" duration="457000" />
+      <workItem from="1747943888089" duration="1001000" />
+      <workItem from="1747977740493" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -226,11 +232,30 @@
       <option name="project" value="LOCAL" />
       <updated>1747765700956</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="kir 2 zharfatech">
+      <option name="closed" value="true" />
+      <created>1747831552880</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1747831552880</updated>
+    </task>
+    <task id="LOCAL-00020" summary="kir 2 wss9">
+      <option name="closed" value="true" />
+      <created>1747944126928</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1747944126928</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -255,6 +280,8 @@
     <MESSAGE value="sag 2 mehrab 2" />
     <MESSAGE value="registration page" />
     <MESSAGE value="fix back" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix back" />
+    <MESSAGE value="kir 2 zharfatech" />
+    <MESSAGE value="kir 2 wss9" />
+    <option name="LAST_COMMIT_MESSAGE" value="kir 2 wss9" />
   </component>
 </project>

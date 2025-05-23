@@ -53,7 +53,7 @@ export default async function AboutUs() {
                 mentors.
               </p>
               <p className="flex items-center justify-center gap-[13px] py-4 text-lg leading-relaxed text-neutral-400">
-                Organized by the Student Scientific Chapter at Sharif University
+                Organized by the Artificial Intelligence Chapter at Sharif University
                 of Technology, the LLM Agent Hackathon provides a unique
                 platform for learning, building, and connecting around one of
                 the most promising frontiers in AI.

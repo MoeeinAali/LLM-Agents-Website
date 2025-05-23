@@ -17,7 +17,7 @@ export const advisorsData = [
   {
     id: 2,
     name: 'Mohammad Hossein Rohban',
-    designation: 'Associate Professor @ Sharif University of Technology',
+    designation: 'Associate Professor @ Sharif University of Technology \n PostDoc @ MIT & Harvard',
     description: '',
     image: './advisors/rohban.png',
     team: 'Scientific Advisors',
@@ -25,7 +25,7 @@ export const advisorsData = [
   {
     id: 3,
     name: 'Shaghayegh Haghjooy',
-    designation: 'Professor @ Isfahan University of Medical Sciences',
+    designation: 'Professor @ Isfahan University of Medical Sciences \n Head of the Center for Strategic Technology Development, Iran Vice-Presidency for Science, Technology and Knowledge Based Economy Affairs',
     description: '',
     image: './advisors/haghjooi.jpg',
     team: 'Scientific Advisors',
@@ -75,7 +75,7 @@ export default function Advisors() {
         {/*  />*/}
         {/*</Link>*/}
       </div>
-      <div className="mx-16  flex flex-wrap justify-around gap-y-8">
+      <div className="mx-16 flex flex-wrap items-start justify-around gap-y-8">
         {advisorsData
           .filter((staff) => staff.image)
           .map((staff, index) => (

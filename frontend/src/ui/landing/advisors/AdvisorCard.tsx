@@ -16,7 +16,10 @@ export default function AdvisorCard({ person }: { person: Staff }) {
       <div className={'pt-3 text-base font-semibold text-black'}>
         {person.name}
       </div>
-      <div className={'text-xs font-normal text-lightslategray'}>
+      <div
+        className={'w-80 text-center text-xs font-normal text-lightslategray'}
+        style={{ whiteSpace: 'pre-line' }}
+      >
         {person.designation}
       </div>
     </div>
