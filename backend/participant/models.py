@@ -4,6 +4,7 @@ from spotplayer.models import SpotPlayerCourse, SpotPlayerLicense
 
 from django.contrib.auth.models import User
 from django.db import models
+import secrets
 
 
 class ParticipantInfo(models.Model):
@@ -92,3 +93,38 @@ class ParticipationAttachment(models.Model):
     attachment = models.FileField(upload_to=UniqueUploadPath('participation'), null=True, blank=True)
     description = models.TextField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
+
+
+class Group(models.Model):
+    name = models.CharField(max_length=100)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Participant, on_delete=models.SET_NULL, null=True, related_name='owned_groups')
+    secret_key = models.CharField(max_length=16, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    members = models.ManyToManyField(Participant, related_name='joined_groups', through='GroupMembership')
+
+    def __str__(self):
+        return f'{self.name} - {self.event}'
+
+    def save(self, *args, **kwargs):
+        if not self.secret_key:
+            self.secret_key = secrets.token_hex(8) 
+        super().save(*args, **kwargs)
+
+
+class GroupMembership(models.Model):
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    joined_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('group', 'participant')
+
+    def __str__(self):
+        return f'{self.participant} in {self.group}'
+
+    def save(self, *args, **kwargs):
+        # Check if participant is already in another group
+        if GroupMembership.objects.filter(participant=self.participant).exclude(id=self.id).exists():
+            raise ValueError("Participant is already a member of another group")
+        super().save(*args, **kwargs)

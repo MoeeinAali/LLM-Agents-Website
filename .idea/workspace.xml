@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="kir 2 wss9">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="advisors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/about/AboutUs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/AdvisorCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/AdvisorCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/Advisors.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/landing/advisors/Advisors.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/participant/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/participant/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/participant/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/participant/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/participant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/lib/api/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/api/fetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,32 +42,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Github/LLM-Agents-Website/frontend/public/source/logos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Github/LLM-Agents-Website/frontend/public/source",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Github\\LLM-Agents-Website\\frontend\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\LLM-Agents-Website\frontend\public\source" />
+      <recent name="D:\Github\LLM-Agents-Website\frontend\src\app\dashboard" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\landing" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public" />
-      <recent name="D:\Github\LLM-Agents-Website\frontend\src\app" />
-      <recent name="D:\Github\Winter-Seminar-Series\WSS-site\frontend\public\source\sponsors" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\LLM-Agents-Website\frontend\src\lib\api\dashboard" />
+      <recent name="D:\Github\LLM-Agents-Website\frontend\src\app\dashboard\group" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -86,7 +103,9 @@
       <workItem from="1747813701322" duration="15000" />
       <workItem from="1747831242539" duration="457000" />
       <workItem from="1747943888089" duration="1001000" />
-      <workItem from="1747977740493" duration="692000" />
+      <workItem from="1747977740493" duration="1694000" />
+      <workItem from="1748065676365" duration="20000" />
+      <workItem from="1748071247105" duration="10645000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -248,7 +267,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747944126928</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="advisors">
+      <option name="closed" value="true" />
+      <created>1747978496790</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1747978496790</updated>
+    </task>
+    <task id="LOCAL-00022" summary="advisors">
+      <option name="closed" value="true" />
+      <created>1747978527201</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1747978527201</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +317,7 @@
     <MESSAGE value="fix back" />
     <MESSAGE value="kir 2 zharfatech" />
     <MESSAGE value="kir 2 wss9" />
-    <option name="LAST_COMMIT_MESSAGE" value="kir 2 wss9" />
+    <MESSAGE value="advisors" />
+    <option name="LAST_COMMIT_MESSAGE" value="advisors" />
   </component>
 </project>

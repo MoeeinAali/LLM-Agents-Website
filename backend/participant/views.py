@@ -8,8 +8,15 @@ from django.core.files import storage
 from rest_framework import generics, permissions, status, views
 from rest_framework.response import Response
 
-from participant.models import Participant, Participation, ParticipationPlan, ParticipationAttachment
-from participant.serializers import ParticipantInfoSerializer, ParticipantSerializer, ParticipationPlanSerializer, ParticipationSerializer, ParticipationAttachmentSerializer, FileSerializer
+from participant.models import (
+    Participant, Participation, ParticipationPlan, ParticipationAttachment,
+    Group, GroupMembership
+)
+from participant.serializers import (
+    ParticipantInfoSerializer, ParticipantSerializer, ParticipationPlanSerializer,
+    ParticipationSerializer, ParticipationAttachmentSerializer, FileSerializer,
+    GroupSerializer, GroupJoinSerializer
+)
 
 
 class ParticipantCreateAPIView(generics.CreateAPIView):
@@ -46,7 +53,7 @@ class PasswordResetAPIView(views.APIView):
             raise Http404
         except Participant.MultipleObjectsReturned:
             return Response(
-                'Multiple users found with this email address',
+                {"error": "Multiple users found with this email address"},
                 status=status.HTTP_400_BAD_REQUEST
             )
         participant.password_reset_code = ''.join(
@@ -83,8 +90,7 @@ class PasswordResetAPIView(views.APIView):
             )
         if not participant.password_reset_code:
             return Response(
-                'Password reset code is not set for this user. '
-                'Or the password is already changed with that code.',
+                {"error": "Password reset code is not set for this user. Or the password is already changed with that code."},
                 status=status.HTTP_400_BAD_REQUEST
             )
         elif participant.password_reset_code == request.data['token']:
@@ -93,12 +99,12 @@ class PasswordResetAPIView(views.APIView):
             participant.password_reset_code = None
             participant.save()
             return Response(
-                'Password reset successfully',
+                {"message": "Password reset successfully"},
                 status=status.HTTP_200_OK
             )
         else:
             return Response(
-                'Password reset code is not correct',
+                {"error": "Password reset code is not correct"},
                 status=status.HTTP_406_NOT_ACCEPTABLE
             )
 
@@ -109,13 +115,13 @@ class ParticipantPasswordChangeAPIView(views.APIView):
         participant = Participant.objects.get(user=request.user)
         if not participant.user.check_password(request.data['old_password']):
             return Response(
-                'Old password is not correct',
+                {"error": "Old password is not correct"},
                 status=status.HTTP_406_NOT_ACCEPTABLE
             )
         participant.user.set_password(request.data['new_password'])
         participant.user.save()
         return Response(
-            'Password changed successfully',
+            {"message": "Password changed successfully"},
             status=status.HTTP_200_OK
         )
 
@@ -174,3 +180,96 @@ class FileByIDAPIView(views.APIView):
     def get(self, request, *args, **kwargs):
         url = base64.b64decode(self.kwargs['file_id']).decode()
         return Response(FileSerializer({'attachment': storage.default_storage.url(url)}).data)
+
+
+class GroupCreateAPIView(generics.CreateAPIView):
+    serializer_class = GroupSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        participant = Participant.objects.get(user=self.request.user)
+        event_id = self.kwargs.get('event_id')
+        serializer.save(owner=participant, event_id=event_id)
+        GroupMembership.objects.create(
+            group=serializer.instance,
+            participant=participant
+        )
+
+class GroupJoinAPIView(views.APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, event_id):
+        serializer = GroupJoinSerializer(data=request.data, context={'request': request, 'event_id': event_id})
+        if serializer.is_valid():
+            participant = Participant.objects.get(user=request.user)
+            try:
+                group = Group.objects.get(secret_key=serializer.validated_data['secret_key'])
+            except Group.DoesNotExist:
+                return Response(
+                    {"error": "Invalid group secret key."},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            GroupMembership.objects.create(
+                group=group,
+                participant=participant
+            )
+            
+            return Response(
+                GroupSerializer(group, context={'request': request}).data,
+                status=status.HTTP_200_OK
+            )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class GroupLeaveAPIView(views.APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request):
+        participant = Participant.objects.get(user=request.user)
+        
+        try:
+            membership = GroupMembership.objects.get(participant=participant)
+        except GroupMembership.DoesNotExist:
+            return Response(
+                {"error": "You are not a member of any group"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        group = membership.group
+        
+        if group.owner == participant:
+            group.owner = None
+            group.save()
+        
+        membership.delete()
+        
+        return Response(
+            {"message": "Successfully left the group"},
+            status=status.HTTP_200_OK
+        )
+
+class ParticipantGroupAPIView(views.APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        participant = Participant.objects.get(user=request.user)
+        
+        try:
+            membership = GroupMembership.objects.get(participant=participant)
+            group = membership.group
+            return Response(
+                GroupSerializer(group, context={'request': request}).data,
+                status=status.HTTP_200_OK
+            )
+        except GroupMembership.DoesNotExist:
+            try:
+                group = Group.objects.get(owner=participant)
+                return Response(
+                    GroupSerializer(group, context={'request': request}).data,
+                    status=status.HTTP_200_OK
+                )
+            except Group.DoesNotExist:
+                return Response(
+                    {"error": "You are not a member of any group"},
+                    status=status.HTTP_404_NOT_FOUND
+                )

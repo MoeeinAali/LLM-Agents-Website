@@ -6,7 +6,10 @@ from rest_framework import serializers
 
 from core.serializers import WorkshopSerializer
 
-from participant.models import ModeOfAttendance, Participant, ParticipantInfo, Participation, ParticipationPlan, ParticipationAttachment
+from participant.models import (
+    ModeOfAttendance, Participant, ParticipantInfo, Participation, 
+    ParticipationPlan, ParticipationAttachment, Group, GroupMembership, Event
+)
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -22,7 +25,7 @@ class ParticipantSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Participant
-        fields = ('user', )
+        fields = ('user', 'info')
 
     def create(self, validated_data):
         user_data = validated_data.pop('user')
@@ -57,23 +60,23 @@ class ParticipantInfoSerializer(serializers.ModelSerializer):
             rem = temp % 11
             if (rem < 2 and int(value[9]) == rem) or (rem >= 2 and int(value[9]) == (11 - rem)):
                 return value
-            raise serializers.ValidationError("National Code is not valid.")
-        raise serializers.ValidationError("National Code is not valid.")
+            raise serializers.ValidationError({"error": "National Code is not valid."})
+        raise serializers.ValidationError({"error": "National Code is not valid."})
     
     def validate_phone_number(self, value: str) -> str:
         if re.match(r'^(\+\d{1,3}|0)\d{10}$', value):
             return value
-        raise serializers.ValidationError("Phone number is not valid.")
+        raise serializers.ValidationError({"error": "Phone number is not valid."})
     
     def validate_gender(self, value: str) -> str:
         if value in ['M', 'F', 'O']:
             return value
-        raise serializers.ValidationError("Gender is not valid.")
+        raise serializers.ValidationError({"error": "Gender is not valid."})
     
     def validate_grade(self, value: str) -> str:
         if value in ['B', 'M', 'P']:
             return value
-        raise serializers.ValidationError("Grade is not valid.")
+        raise serializers.ValidationError({"error": "Grade is not valid."})
 
 class ModeOfAttendanceSerializer(serializers.ModelSerializer):
     class Meta:
@@ -112,3 +115,63 @@ class ParticipationAttachmentSerializer(serializers.ModelSerializer):
 
 class FileSerializer(serializers.Serializer):
     attachment = serializers.CharField()
+
+class GroupSerializer(serializers.ModelSerializer):
+    secret_key = serializers.CharField(read_only=True)
+    members = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Group
+        fields = ('name', 'secret_key', 'members')
+        read_only_fields = ('secret_key',)
+
+    def get_members(self, obj):
+        members = obj.members.all().select_related('info', 'user')
+        member_data = []
+        for member in members:
+            first_name = member.info.first_name if member.info else ''
+            last_name = member.info.last_name if member.info else ''
+            full_name = f"{first_name} {last_name}".strip() or None
+            member_data.append({
+                'email': member.user.email,
+                'full_name': full_name
+            })
+        return member_data
+
+    def validate(self, data):
+        participant = Participant.objects.get(user=self.context['request'].user)
+        event_id = self.context['view'].kwargs.get('event_id')
+        
+        if not Participation.objects.filter(participant=participant, plan__event_id=event_id).exists():
+            raise serializers.ValidationError({"error": "You must be participating in this event to create a group."})
+        
+        if Group.objects.filter(owner=participant).exists() or Group.objects.filter(members=participant).exists():
+            raise serializers.ValidationError({"error": "You are already a member or owner of another group."})
+        
+        return data
+
+class GroupJoinSerializer(serializers.Serializer):
+    secret_key = serializers.CharField(max_length=16)
+
+    def validate(self, data):
+        participant = Participant.objects.get(user=self.context['request'].user)
+        event_id = self.context.get('event_id')
+        
+        if Group.objects.filter(owner=participant).exists() or Group.objects.filter(members=participant).exists():
+            raise serializers.ValidationError({"error": "You are already a member or owner of another group."})
+        
+        try:
+            group = Group.objects.get(secret_key=data['secret_key'])
+        except Group.DoesNotExist:
+            raise serializers.ValidationError({"error": "Invalid group secret key."})
+        
+        if group.members.count() >= 6:
+            raise serializers.ValidationError({"error": "This group has reached its maximum capacity."})
+        
+        if not Participation.objects.filter(participant=participant, plan__event_id=event_id).exists():
+            raise serializers.ValidationError({"error": "You must be participating in this event to join the group."})
+        
+        if group.event_id != event_id:
+            raise serializers.ValidationError({"error": "This group does not belong to the specified event."})
+        
+        return data

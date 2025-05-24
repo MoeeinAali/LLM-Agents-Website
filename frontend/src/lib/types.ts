@@ -175,3 +175,14 @@ export type CertificateInfo = {
 export type FileInfo = {
   attachment: string;
 };
+
+export interface GroupMember {
+  email: string;
+  fullName: string | null;
+}
+
+export interface Group {
+  name: string;
+  secretKey: string;
+  members: GroupMember[];
+}

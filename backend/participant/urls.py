@@ -13,4 +13,10 @@ urlpatterns = [
     path('mode/<int:event_id>/', views.ModeOfAttendanceByEventAPIView.as_view(), name='mode'),
     path('attachment/<int:event_id>/', views.ParticipationAttachmentByEventAPIView.as_view(), name='attachment'),
     path('file/<str:file_id>/', views.FileByIDAPIView.as_view(), name='file'),
+    
+    # Group-related URLs
+    path('group/<int:event_id>/create/', views.GroupCreateAPIView.as_view(), name='group-create'),
+    path('group/<int:event_id>/join/', views.GroupJoinAPIView.as_view(), name='group-join'),
+    path('group/leave/', views.GroupLeaveAPIView.as_view(), name='group-leave'),
+    path('group/my-group/', views.ParticipantGroupAPIView.as_view(), name='my-group'),
 ]

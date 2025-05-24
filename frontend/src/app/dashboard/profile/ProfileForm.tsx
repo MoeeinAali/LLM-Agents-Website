@@ -401,7 +401,7 @@ export default function ProfileForm({
                     control: (base) => ({
                       ...base,
                       borderColor: '#ebe2eb',
-                      '&:hover': { borderColor: '#9d6d9b' },
+                      '&:hover': { borderColor: '#33ABA2' },
                       boxShadow: '0 0 0 1px #ffffff',
                     }),
                     option: (base, { isFocused, isSelected }) => ({
@@ -409,7 +409,7 @@ export default function ProfileForm({
                       backgroundColor: isSelected
                         ? ''
                         : isFocused
-                          ? '#c4a7c3'
+                          ? '#33ABA2'
                           : 'white',
                       color: isSelected ? 'white' : 'black',
                     }),

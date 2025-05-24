@@ -2,7 +2,6 @@ from django.contrib import admin
 from core.admin import ExportCSVMixin
 import csv
 from django.http import HttpResponse
-
 from participant.models import *
 
 
@@ -76,3 +75,41 @@ class ParticipantInfoAdmin(admin.ModelAdmin):
 admin.site.register(ParticipationPlan)
 admin.site.register(ParticipationAttachment)
 admin.site.register(ModeOfAttendance)
+
+class GroupMembershipInline(admin.TabularInline):
+    model = GroupMembership
+    extra = 0
+    readonly_fields = ('joined_at',)
+    autocomplete_fields = ['participant']
+    raw_id_fields = ['participant']
+
+@admin.register(Group)
+class GroupAdmin(admin.ModelAdmin):
+    list_display = ('name', 'event', 'owner', 'get_member_count', 'created_at')
+    list_filter = ('event', 'created_at')
+    search_fields = ('name', 'owner__user__email', 'members__user__email')
+    readonly_fields = ('secret_key', 'created_at')
+    inlines = [GroupMembershipInline]
+    autocomplete_fields = ['owner']
+    raw_id_fields = ['event']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).prefetch_related(
+            'members',
+            'members__user',
+            'members__info',
+            'owner',
+            'owner__user',
+            'owner__info'
+        )
+
+    def get_member_count(self, obj):
+        return obj.members.count()
+    get_member_count.short_description = 'Member Count'
+
+@admin.register(GroupMembership)
+class GroupMembershipAdmin(admin.ModelAdmin):
+    list_display = ('participant', 'group', 'joined_at')
+    list_filter = ('joined_at', 'group__event')
+    search_fields = ('participant__user__email', 'group__name')
+    readonly_fields = ('joined_at',)
