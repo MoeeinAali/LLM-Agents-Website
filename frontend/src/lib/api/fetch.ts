@@ -52,7 +52,11 @@ export async function fetchJson<JSON = unknown>(
     let message: any;
     try {
       const errorJson = await response.json();
-      message = errorJson.error || errorJson?.message || errorJson?.detail || JSON.stringify(errorJson);
+      message =
+        errorJson.error ||
+        errorJson?.message ||
+        errorJson?.detail ||
+        JSON.stringify(errorJson);
     } catch (error) {
       message = response.statusText;
     }

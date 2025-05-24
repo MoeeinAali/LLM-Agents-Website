@@ -1,6 +1,5 @@
 'use server';
 
-
 import { fetchJsonWithAuth } from '../fetch';
 import { unstable_noStore as noStore } from 'next/dist/server/web/spec-extension/unstable-no-store';
 import { Group } from '../../types';
@@ -46,12 +45,12 @@ export async function fetchGroup() {
   } catch (err) {
     return {} as Group;
   }
-
-
 }
 
-
-export async function callLeaveGroup(): Promise<{ error?: string; success?: boolean }> {
+export async function callLeaveGroup(): Promise<{
+  error?: string;
+  success?: boolean;
+}> {
   try {
     await leaveGroup();
     revalidatePath('/dashboard/group');
@@ -61,13 +60,11 @@ export async function callLeaveGroup(): Promise<{ error?: string; success?: bool
   }
 }
 
-
 async function leaveGroup() {
   noStore();
   const url = `${process.env.API_ORIGIN}/api/group/leave/`;
   return await fetchJsonWithAuth<any>(url, {}, { method: 'POST' });
 }
-
 
 async function joinGroup(input: JoinGroupFormInput) {
   const url = `${process.env.API_ORIGIN}/api/group/${process.env.WSS_ORDER}/join/`;
@@ -90,10 +87,7 @@ export async function callJoinGroup(
   } catch (err: any) {
     console.log(err.message);
     return {
-      error:
-        err?.message ||
-        err?.response?.statusText ||
-        'Joining Failed.',
+      error: err?.message || err?.response?.statusText || 'Joining Failed.',
     };
   }
 }

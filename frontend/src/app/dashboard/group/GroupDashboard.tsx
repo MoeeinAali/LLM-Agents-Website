@@ -2,7 +2,11 @@
 
 import { useState } from 'react';
 import { Group } from '../../../lib/types';
-import { callCreateGroup, callLeaveGroup, callJoinGroup } from '../../../lib/api/dashboard/group';
+import {
+  callCreateGroup,
+  callLeaveGroup,
+  callJoinGroup,
+} from '../../../lib/api/dashboard/group';
 
 export default function GroupDashboard({ group }: { group: Group }) {
   const [error, setError] = useState('');
@@ -32,7 +36,7 @@ export default function GroupDashboard({ group }: { group: Group }) {
         </div>
 
         <div className="flex items-center gap-4">
-          <span className="text-base font-mono text-slate-700">
+          <span className="font-mono text-base text-slate-700">
             Secret Key: {group.secretKey}
           </span>
           <button
@@ -42,7 +46,6 @@ export default function GroupDashboard({ group }: { group: Group }) {
             {copied ? 'Copied!' : 'Copy'}
           </button>
         </div>
-
 
         <div>
           <h3 className="mb-2 mt-2 text-lg font-semibold text-slate-700">
