@@ -121,7 +121,7 @@ export default function Header({ isAuthenticated = false }) {
         <div className="text-xl font-medium uppercase not-italic leading-normal tracking-[0.8px] text-[#1F2B3D]">
           Presentations from 15+ top level companies and masters
         </div>
-        <div className="grid grid-cols-4 items-center justify-center gap-8 self-stretch md:grid-cols-8 md:gap-x-16 md:gap-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-10">
           <a href="https://www.sharif.ir/">
             <img
               src="/source/logos/sharif.svg"
@@ -140,6 +140,7 @@ export default function Header({ isAuthenticated = false }) {
               className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
+
           <a href="https://www.sharif.ir/">
             <img
               src="/source/logos/saic.svg"
@@ -203,13 +204,31 @@ export default function Header({ isAuthenticated = false }) {
           <a href="https://www.jabama.com/">
             <img
               src="/source/logos/jabama.svg?v=2"
-              className="m-auto m-auto w-full w-full max-w-[51px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto w-full max-w-[51px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="/">
             <img
               src="/source/logos/center.svg?v=2"
-              className="m-auto m-auto w-full w-full max-w-[71px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto w-full max-w-[71px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="https://mori.style/">
+            <img
+              src="/source/logos/mori.svg"
+              className="h-7 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="https://mstid.com/">
+            <img
+              src="/source/logos/foolad.svg"
+              className="h-20 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="https://www.tosan.com/">
+            <img
+              src="/source/logos/tosan.png"
+              className="h-10 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
         </div>

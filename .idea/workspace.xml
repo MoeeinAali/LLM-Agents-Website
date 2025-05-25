@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="advisors">
+    <list default="true" id="5dd4af7b-773f-4aad-be42-c7e64ab99492" name="Changes" comment="close">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/participant/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/participant/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/participant/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/participant/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/participant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/participant/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/DashboardNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/dashboard/profile/ProfileForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/api/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/api/fetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/lib/api/session.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/lib/api/session.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/components/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +42,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/Github/LLM-Agents-Website/frontend/public/source",
+    "last_opened_file_path": "D:/Github/LLM-Agents-Website/frontend/public/source/logos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,9 +56,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\source" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\src\app\dashboard" />
-      <recent name="D:\Github\LLM-Agents-Website\frontend\public\source\logos" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public\landing" />
       <recent name="D:\Github\LLM-Agents-Website\frontend\public" />
     </key>
@@ -105,7 +98,10 @@
       <workItem from="1747943888089" duration="1001000" />
       <workItem from="1747977740493" duration="1694000" />
       <workItem from="1748065676365" duration="20000" />
-      <workItem from="1748071247105" duration="10645000" />
+      <workItem from="1748071247105" duration="11224000" />
+      <workItem from="1748084491938" duration="523000" />
+      <workItem from="1748177591853" duration="894000" />
+      <workItem from="1748193923910" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="fix: add WSS_ORDER to Dockerfile">
       <option name="closed" value="true" />
@@ -283,7 +279,47 @@
       <option name="project" value="LOCAL" />
       <updated>1747978527201</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: Grouping">
+      <option name="closed" value="true" />
+      <created>1748083099130</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1748083099130</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: Grouping">
+      <option name="closed" value="true" />
+      <created>1748083119254</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1748083119254</updated>
+    </task>
+    <task id="LOCAL-00025" summary="close">
+      <option name="closed" value="true" />
+      <created>1748178271829</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1748178271829</updated>
+    </task>
+    <task id="LOCAL-00026" summary="close">
+      <option name="closed" value="true" />
+      <created>1748178291938</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1748178291938</updated>
+    </task>
+    <task id="LOCAL-00027" summary="close">
+      <option name="closed" value="true" />
+      <created>1748178472112</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1748178472112</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +354,8 @@
     <MESSAGE value="kir 2 zharfatech" />
     <MESSAGE value="kir 2 wss9" />
     <MESSAGE value="advisors" />
-    <option name="LAST_COMMIT_MESSAGE" value="advisors" />
+    <MESSAGE value="feat: Grouping" />
+    <MESSAGE value="close" />
+    <option name="LAST_COMMIT_MESSAGE" value="close" />
   </component>
 </project>
