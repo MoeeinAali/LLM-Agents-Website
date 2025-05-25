@@ -129,9 +129,11 @@ export default function AttendanceInfo({
               modeOfAttendance.id !== ID_OF_LAUNCH ? (
                 <span
                   key={modeOfAttendance.id}
-                  className={'flex gap-2 items-center justify-center '}
+                  className={'flex items-center justify-center gap-2 '}
                 >
-                  <label className={`flex items-center gap-x-2 line-through opacity-80`}>
+                  <label
+                    className={`flex items-center gap-x-2 line-through opacity-80`}
+                  >
                     <input
                       type={'radio'}
                       id={modeOfAttendance.name}
@@ -152,8 +154,8 @@ export default function AttendanceInfo({
                       {modeOfAttendance.name} -{' '}
                       {(modeOfAttendance.price ?? 0).toLocaleString()} Tooman
                     </span>
-                  </label><span>Capacity is full</span>
-
+                  </label>
+                  <span>Capacity is full</span>
 
                   {/*{modeOfAttendance.name.includes('Person') && (*/}
                   {/*  <span>Capacity is full</span>*/}
