@@ -216,19 +216,19 @@ export default function Header({ isAuthenticated = false }) {
           <a href="https://mori.style/">
             <img
               src="/source/logos/mori.svg"
-              className="h-7 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto h-7 opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://mstid.com/">
             <img
               src="/source/logos/foolad.svg"
-              className="h-20 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto h-20 opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://www.tosan.com/">
             <img
               src="/source/logos/tosan.png"
-              className="h-10 m-auto m-auto opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto h-10 opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
         </div>
