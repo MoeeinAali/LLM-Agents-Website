@@ -52,7 +52,7 @@ export default function Navbar({ fixed = true, isAuthenticated = false }) {
             <Link href="/">
               <Image
                 className="mr-16 max-lg:w-[40.8px] lg:w-[58px]"
-                src={'/source/logos/saic.svg'}
+                src={'/source/logos/saic_.svg'}
                 width={100}
                 height={100}
                 alt={'SAIC'}

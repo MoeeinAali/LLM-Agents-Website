@@ -143,7 +143,7 @@ export default function Header({ isAuthenticated = false }) {
 
           <a href="https://www.sharif.ir/">
             <img
-              src="/source/logos/saic.svg"
+              src="/source/logos/saic_.svg"
               className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>

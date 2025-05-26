@@ -20,7 +20,6 @@ export default function StaffCard({ person }: { person: Staff }) {
       <div className={'text-xs font-normal text-lightslategray'}>
         {person.team}
       </div>
-
     </div>
   );
 }

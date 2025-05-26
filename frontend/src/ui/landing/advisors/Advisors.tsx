@@ -26,8 +26,7 @@ export const advisorsData = [
   {
     id: 3,
     name: 'Shaghayegh Haghjooy',
-    designation:
-      'Professor @ Tehran University of Medical Sciences',
+    designation: 'Professor @ Tehran University of Medical Sciences',
     description: '',
     image: './advisors/haghjooi.jpg',
     team: 'Scientific Advisors',
