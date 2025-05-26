@@ -27,7 +27,7 @@ export const advisorsData = [
     id: 3,
     name: 'Shaghayegh Haghjooy',
     designation:
-      'Professor @ Isfahan University of Medical Sciences \n Head of the Center for Strategic Technology Development, Iran Vice-Presidency for Science, Technology and Knowledge Based Economy Affairs',
+      'Professor @ Tehran University of Medical Sciences',
     description: '',
     image: './advisors/haghjooi.jpg',
     team: 'Scientific Advisors',

@@ -24,21 +24,30 @@ export default function Footer() {
               className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
-          <a href="https://t.me/ai_sharif" target="_blank">
-            <Image
-              src="/source/logos/saic.svg"
-              alt="Sharif Artificial Intelligence Chapter"
-              width="65"
-              height="65"
-              className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
-            />
-          </a>
-          <a href="https://t.me/ai_sharif" target="_blank">
+          <a href="https://t.me/RIMLLab/" target="_blank">
             <Image
               src="/source/logos/riml.svg"
               alt="RIML Lab."
               width="65"
               height="65"
+              className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="https://t.me/IEEE_SharifUT" target="_blank">
+            <Image
+              src="/source/logos/ieee.svg"
+              alt="RIML Lab."
+              width="45"
+              height="45"
+              className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
+          <a href="https://t.me/ai_sharif" target="_blank">
+            <Image
+              src="/source/logos/saic.svg"
+              alt="Sharif Artificial Intelligence Chapter"
+              width="180"
+              height="180"
               className="opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>

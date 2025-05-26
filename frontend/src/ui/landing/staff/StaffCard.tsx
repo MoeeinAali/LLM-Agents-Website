@@ -17,6 +17,10 @@ export default function StaffCard({ person }: { person: Staff }) {
       <div className={'pt-3 text-base font-semibold text-black'}>
         {person.name}
       </div>
+      <div className={'text-xs font-normal text-lightslategray'}>
+        {person.team}
+      </div>
+
     </div>
   );
 }

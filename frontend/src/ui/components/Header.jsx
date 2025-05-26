@@ -100,10 +100,10 @@ export default function Header({ isAuthenticated = false }) {
             </div>
             <div className="shrink-0 max-lg:w-1/2">
               <p className="text-6xl font-bold leading-snug tracking-tight text-white max-lg:text-[40px]">
-                5+
+                155+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Presentations
+                Million Tomans Price
               </p>
             </div>
             <div className="shrink-0 max-lg:w-1/2">
@@ -111,7 +111,7 @@ export default function Header({ isAuthenticated = false }) {
                 2+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Days Hackathon
+                Billion Tomans Investment
               </p>
             </div>
           </div>

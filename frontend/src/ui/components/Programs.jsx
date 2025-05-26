@@ -33,7 +33,7 @@ const items = [
     title: 'Insight Sessions',
     overline: 'Uncovering the Future with Experts',
     img: '/landing/seminars.jpg',
-    desc: 'The first day of the event is dedicated to thought leadership and knowledge sharing. Dive into the evolving landscape of AI with a series of inspiring talks and interactive sessions led by top minds from both academia and industry. Learn how Large Language Model (LLM) agents are shaping the future—from real-world use cases to cutting-edge research—and prepare yourself for the challenges of Day 2.',
+    desc: 'The first day of the event is dedicated to thought leadership and knowledge sharing. Dive into the evolving landscape of AI with a series of inspiring talks and interactive sessions led by top minds from both academia and industry. Learn how Large Language Model (LLM) agents are shaping the future—from real-world use cases to cutting-edge research—and prepare yourself for the challenges of Day 2 & 3.',
   },
   {
     id: 2,
