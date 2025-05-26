@@ -121,7 +121,7 @@ export default function Header({ isAuthenticated = false }) {
         <div className="text-xl font-medium uppercase not-italic leading-normal tracking-[0.8px] text-[#1F2B3D]">
           Presentations from 15+ top level companies and masters
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-10">
+        <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-3">
           <a href="https://www.sharif.ir/">
             <img
               src="/source/logos/sharif.svg"
@@ -141,28 +141,29 @@ export default function Header({ isAuthenticated = false }) {
             />
           </a>
 
-          <a href="https://www.sharif.ir/">
-            <img
-              src="/source/logos/saic_.svg"
-              className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
-            />
-          </a>
+
           <a href="https://www.sharif.ir/">
             <img
               src="/source/logos/ieee.svg"
               className="m-auto m-auto w-full w-full max-w-[50px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
+          <a href="https://www.sharif.ir/">
+            <img
+              src="/source/logos/saic_.svg"
+              className="m-auto m-auto h-12 opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+            />
+          </a>
           <a href="https://divar.ir/">
             <img
               src="/source/logos/divaar.svg"
-              className="m-auto m-auto w-full w-full max-w-[61px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto w-full w-full max-w-[71px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://www.jaryan.net/">
             <img
               src="/source/logos/jaryan.svg"
-              className="m-auto m-auto w-full w-full max-w-[61px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              className="m-auto m-auto h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="https://www.yektanet.com/">
@@ -201,10 +202,10 @@ export default function Header({ isAuthenticated = false }) {
               className="m-auto m-auto w-full w-full max-w-[70px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
-          <a href="https://www.jabama.com/">
+          <a href="https://gapify.ai/">
             <img
-              src="/source/logos/jabama.svg?v=2"
-              className="m-auto w-full max-w-[51px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
+              src="/source/logos/gapify.svg?v=3"
+              className="m-auto w-full max-w-[61px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0"
             />
           </a>
           <a href="/">
