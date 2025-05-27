@@ -3,7 +3,7 @@ from core.admin import ExportCSVMixin
 import csv
 from django.http import HttpResponse
 from participant.models import *
-
+from core.admin import ExportCSVMixin
 
 @admin.register(Participant)
 class ParticipantAdmin(admin.ModelAdmin, ExportCSVMixin):
@@ -84,7 +84,7 @@ class GroupMembershipInline(admin.TabularInline):
     raw_id_fields = ['participant']
 
 @admin.register(Group)
-class GroupAdmin(admin.ModelAdmin):
+class GroupAdmin(admin.ModelAdmin,ExportCSVMixin):
     list_display = ('name', 'event', 'owner', 'get_member_count', 'created_at')
     list_filter = ('event', 'created_at')
     search_fields = ('name', 'owner__user__email', 'members__user__email')
@@ -108,7 +108,7 @@ class GroupAdmin(admin.ModelAdmin):
     get_member_count.short_description = 'Member Count'
 
 @admin.register(GroupMembership)
-class GroupMembershipAdmin(admin.ModelAdmin):
+class GroupMembershipAdmin(admin.ModelAdmin,ExportCSVMixin):
     list_display = ('participant', 'group', 'joined_at')
     list_filter = ('joined_at', 'group__event')
     search_fields = ('participant__user__email', 'group__name')

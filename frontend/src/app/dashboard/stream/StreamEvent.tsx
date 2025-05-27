@@ -20,7 +20,6 @@ const formatTime = (time: Date) => {
   return time.toLocaleString('en-US', options);
 };
 
-
 export default function StreamEvent({
   streamEvent,
 }: {
