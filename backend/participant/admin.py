@@ -3,7 +3,6 @@ from core.admin import ExportCSVMixin
 import csv
 from django.http import HttpResponse
 from participant.models import *
-from core.admin import ExportCSVMixin
 
 @admin.register(Participant)
 class ParticipantAdmin(admin.ModelAdmin, ExportCSVMixin):
@@ -92,6 +91,7 @@ class GroupAdmin(admin.ModelAdmin,ExportCSVMixin):
     inlines = [GroupMembershipInline]
     autocomplete_fields = ['owner']
     raw_id_fields = ['event']
+    actions = ["export_as_csv"]
 
     def get_queryset(self, request):
         return super().get_queryset(request).prefetch_related(
@@ -113,3 +113,4 @@ class GroupMembershipAdmin(admin.ModelAdmin,ExportCSVMixin):
     list_filter = ('joined_at', 'group__event')
     search_fields = ('participant__user__email', 'group__name')
     readonly_fields = ('joined_at',)
+    actions = ["export_as_csv"]
