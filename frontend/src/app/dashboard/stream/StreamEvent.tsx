@@ -31,13 +31,13 @@ export default function StreamEvent({
   const onAttendClick: React.MouseEventHandler<HTMLButtonElement> = async (
     event,
   ) => {
-    const response = await attendStream({ id: streamEvent.id });
+    // const response = await attendStream({ id: streamEvent.id });
+    //
+    // if (response.error) {
+    //   return;
+    // }
 
-    if (response.error) {
-      return;
-    }
-
-    window.open(response.link, '_blank').focus();
+    window.open("https://vc.sharif.edu/ch/iml", '_blank').focus();
   };
 
   return (
