@@ -8,9 +8,8 @@ import { StreamEvent } from '../../../lib/types';
 import { attendStream } from '../../../lib/api/dashboard/stream';
 
 const formatTime = (time: Date) => {
-  const offsetTime = new Date(time.getTime());
-
   const options: Intl.DateTimeFormatOptions = {
+    timeZone: 'UTC', // اضافه کردن timezone
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -18,8 +17,9 @@ const formatTime = (time: Date) => {
     minute: 'numeric',
     hour12: true,
   };
-  return offsetTime.toLocaleString('en-US', options);
+  return time.toLocaleString('en-US', options);
 };
+
 
 export default function StreamEvent({
   streamEvent,

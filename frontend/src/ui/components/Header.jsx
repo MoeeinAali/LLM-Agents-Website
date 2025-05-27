@@ -141,7 +141,6 @@ export default function Header({ isAuthenticated = false }) {
             />
           </a>
 
-
           <a href="https://www.sharif.ir/">
             <img
               src="/source/logos/ieee.svg"
