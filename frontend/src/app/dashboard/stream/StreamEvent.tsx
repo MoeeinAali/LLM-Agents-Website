@@ -32,7 +32,6 @@ export default function StreamEvent({
   const nowTehran = new Date(now.getTime() + tehranOffsetMs);
   const hasStarted = nowTehran > new Date(streamEvent.startingTime);
 
-
   const onAttendClick: React.MouseEventHandler<HTMLButtonElement> = async (
     event,
   ) => {
