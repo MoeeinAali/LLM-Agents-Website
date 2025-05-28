@@ -31,13 +31,10 @@ class ParticipationAdmin(admin.ModelAdmin):
     participant_email.short_description = "Email"
 
     def export_data(self, request, queryset):
-        meta = self.model._meta
+        queryset = queryset.select_related('participant__user', 'participant__info', 'plan')
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename=participation_data.csv'
-
-        # Add UTF-8 BOM
         response.write(codecs.BOM_UTF8)
-
         writer = csv.writer(response)
 
         headers = [
@@ -52,13 +49,15 @@ class ParticipationAdmin(admin.ModelAdmin):
         writer.writerow(headers)
 
         for obj in queryset:
+            info = getattr(obj.participant, 'info', None)
+            user = getattr(obj.participant, 'user', None)
             row = [
-                obj.id if obj.id else '',
-                obj.participant.user.email if obj.participant and obj.participant.user else '',
-                obj.participant.info.first_name if obj.participant and obj.participant.info else '',
-                obj.participant.info.last_name if obj.participant and obj.participant.info else '',
-                obj.participant.info.national_code if obj.participant and obj.participant.info else '',
-                obj.participant.info.phone_number if obj.participant and obj.participant.info else '',
+                obj.id or '',
+                user.email if user else '',
+                info.first_name if info else '',
+                info.last_name if info else '',
+                info.national_code if info else '',
+                info.phone_number if info else '',
                 str(obj.plan) if obj.plan else ''
             ]
             writer.writerow(row)
