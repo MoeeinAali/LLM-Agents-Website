@@ -37,7 +37,7 @@ export default function StreamEvent({
     //   return;
     // }
 
-    window.open("https://vc.sharif.edu/ch/iml", '_blank').focus();
+    window.open('https://vc.sharif.edu/ch/iml', '_blank').focus();
   };
 
   return (

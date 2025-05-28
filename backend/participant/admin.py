@@ -1,8 +1,10 @@
 from django.contrib import admin
 from core.admin import ExportCSVMixin
 import csv
+import codecs
 from django.http import HttpResponse
 from participant.models import *
+
 
 @admin.register(Participant)
 class ParticipantAdmin(admin.ModelAdmin, ExportCSVMixin):
@@ -32,6 +34,10 @@ class ParticipationAdmin(admin.ModelAdmin):
         meta = self.model._meta
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename=participation_data.csv'
+
+        # Add UTF-8 BOM
+        response.write(codecs.BOM_UTF8)
+
         writer = csv.writer(response)
 
         headers = [
@@ -75,6 +81,7 @@ admin.site.register(ParticipationPlan)
 admin.site.register(ParticipationAttachment)
 admin.site.register(ModeOfAttendance)
 
+
 class GroupMembershipInline(admin.TabularInline):
     model = GroupMembership
     extra = 0
@@ -82,8 +89,9 @@ class GroupMembershipInline(admin.TabularInline):
     autocomplete_fields = ['participant']
     raw_id_fields = ['participant']
 
+
 @admin.register(Group)
-class GroupAdmin(admin.ModelAdmin,ExportCSVMixin):
+class GroupAdmin(admin.ModelAdmin, ExportCSVMixin):
     list_display = ('name', 'event', 'owner', 'get_member_count', 'created_at')
     list_filter = ('event', 'created_at')
     search_fields = ('name', 'owner__user__email', 'members__user__email')
@@ -105,10 +113,12 @@ class GroupAdmin(admin.ModelAdmin,ExportCSVMixin):
 
     def get_member_count(self, obj):
         return obj.members.count()
+
     get_member_count.short_description = 'Member Count'
 
+
 @admin.register(GroupMembership)
-class GroupMembershipAdmin(admin.ModelAdmin,ExportCSVMixin):
+class GroupMembershipAdmin(admin.ModelAdmin, ExportCSVMixin):
     list_display = ('participant', 'group', 'joined_at')
     list_filter = ('joined_at', 'group__event')
     search_fields = ('participant__user__email', 'group__name')
