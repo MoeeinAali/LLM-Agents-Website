@@ -103,7 +103,7 @@ export default function Header({ isAuthenticated = false }) {
                 155+
               </p>
               <p className="text-white text-opacity-80 max-lg:text-sm">
-                Million Tomans Price
+                Million Tomans Prize
               </p>
             </div>
             <div className="shrink-0 max-lg:w-1/2">
