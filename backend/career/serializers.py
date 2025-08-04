@@ -1,4 +1,6 @@
 from rest_framework import serializers
+
+from participant.models import Participant
 from .models import Brand, Position, Application
 
 
@@ -40,3 +42,30 @@ class ApplicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Application
         fields = ['id', 'position', 'cover_letter', 'created_at']
+
+
+class ApplicationCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Application
+        fields = ['position', 'cover_letter']
+
+    def validate(self, attrs):
+        user = self.context['request'].user
+        try:
+            participant = Participant.objects.get(user=user)
+        except Participant.DoesNotExist:
+            raise serializers.ValidationError("Participant not found for this user.")
+
+        if Application.objects.filter(participant=participant, position=attrs['position']).exists():
+            raise serializers.ValidationError("You have already applied for this position.")
+
+        return attrs
+
+    def create(self, validated_data):
+        user = self.context['request'].user
+        participant = Participant.objects.get(user=user)
+        application = Application.objects.create(
+            participant=participant,
+            **validated_data
+        )
+        return application

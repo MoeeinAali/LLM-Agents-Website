@@ -5,7 +5,7 @@ from .models import Brand, Position, Application
 from .serializers import (
     BrandWithPositionsSerializer,
     PositionDetailSerializer,
-    ApplicationSerializer
+    ApplicationSerializer, ApplicationCreateSerializer
 )
 from rest_framework.exceptions import NotFound
 
@@ -31,3 +31,8 @@ class MyApplicationsAPIView(generics.ListAPIView):
         except Participant.DoesNotExist:
             raise NotFound("Participant not found for this user.")
         return Application.objects.filter(participant=participant).select_related('position')
+
+
+class ApplyToPositionAPIView(generics.CreateAPIView):
+    serializer_class = ApplicationCreateSerializer
+    permission_classes = [permissions.IsAuthenticated]

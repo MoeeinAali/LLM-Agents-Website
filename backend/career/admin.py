@@ -12,6 +12,7 @@ class BrandAdmin(admin.ModelAdmin):
 class PositionAdmin(admin.ModelAdmin):
     list_display = ('title', 'brand')
     list_filter = ('brand',)
+    autocomplete_fields = ['brand', ]
     search_fields = ('title',)
 
 
@@ -19,6 +20,7 @@ class PositionAdmin(admin.ModelAdmin):
 class ApplicationAdmin(admin.ModelAdmin):
     list_display = ('participant', 'position', 'get_brand')
     list_filter = ('position', 'position__brand')
+    autocomplete_fields = ['participant', 'position']
 
     def get_brand(self, obj):
         return obj.position.brand
