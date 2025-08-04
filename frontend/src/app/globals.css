@@ -62,7 +62,6 @@
     brightness(111%) contrast(111%);
 }
 
-
-.debug{
+.debug {
   border: 1px solid red;
 }
