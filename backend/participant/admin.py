@@ -123,3 +123,4 @@ class GroupMembershipAdmin(admin.ModelAdmin, ExportCSVMixin):
     search_fields = ('participant__user__email', 'group__name')
     readonly_fields = ('joined_at',)
     actions = ["export_as_csv"]
+    autocomplete_fields = ('participant', 'group',)

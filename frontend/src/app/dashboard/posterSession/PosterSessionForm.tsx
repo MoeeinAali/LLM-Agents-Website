@@ -105,7 +105,7 @@ export default function PosterSessionForm(props: IPosterSessionForm) {
         }}
       >
         <label className="text-4xl font-bold not-italic leading-[normal] tracking-[-0.72px] text-[#1F2B3D]">
-          Poster Session Competition (Deadline Passed)
+          Upload your CV
         </label>
 
         <div className="flex items-start gap-6 self-stretch max-md:flex-col">
@@ -114,13 +114,12 @@ export default function PosterSessionForm(props: IPosterSessionForm) {
               Upload File
             </label>
             <p className="text-sm tracking-[0.64px] text-[#8A8998]">
-              Supported format: <strong>.pdf</strong> (Max: 10MB)
+              Supported format: <strong>.pdf</strong> (Max: 5MB)
             </p>
             <div>
               <button
-                disabled={true}
                 onClick={handleClick}
-                className="flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white opacity-70 shadow-md transition"
+                className="flex cursor-pointer items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow-md transition"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,11 +135,10 @@ export default function PosterSessionForm(props: IPosterSessionForm) {
                     d="M3 16.5V19a2 2 0 002 2h14a2 2 0 002-2v-2.5m-4-4l-4-4m0 0l-4 4m4-4v12"
                   />
                 </svg>
-                <span>Upload file</span>
+                <span>Select file</span>
               </button>
 
               <input
-                disabled={true}
                 type="file"
                 accept={'application/pdf'}
                 ref={fileInputRef}
@@ -174,11 +172,8 @@ export default function PosterSessionForm(props: IPosterSessionForm) {
           </div>
         </div>
 
-        <button
-          disabled={true}
-          className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-primary px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white opacity-70"
-        >
-          Update Poster File
+        <button className="mb-8 flex h-[72px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-primary px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">
+          Update CV File
         </button>
       </form>
     </>

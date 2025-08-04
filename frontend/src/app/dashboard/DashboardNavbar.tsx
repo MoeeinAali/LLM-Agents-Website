@@ -21,6 +21,7 @@ export default function DashboardNavbar({
   const isCertificates = pathname === '/dashboard/certificates';
   const isPosterSession = pathname === '/dashboard/posterSession';
   const isGroup = pathname === '/dashboard/group';
+  const isCareer = pathname === '/dashboard/career';
 
   return (
     <div className="flex items-center justify-between self-stretch border-b border-solid border-b-[rgba(138,137,152,0.30)] max-md:-mx-6">
@@ -48,61 +49,32 @@ export default function DashboardNavbar({
             Profile
           </Link>
         </div>
-        {/*<div*/}
-        {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
-        {/*    isPosterSession ? 'border-b-primary' : undefined*/}
-        {/*  }`}*/}
-        {/*>*/}
-        {/*  <Image*/}
-        {/*    width={24}*/}
-        {/*    height={24}*/}
-        {/*    className={`${*/}
-        {/*      isPosterSession ? 'filter-primary' : undefined*/}
-        {/*    } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
-        {/*    src="/source/ic_wallpaper_48px.svg"*/}
-        {/*    alt=""*/}
-        {/*  />*/}
-        {/*  <Link*/}
-        {/*    href="/dashboard/posterSession"*/}
-        {/*    className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
-        {/*      isPosterSession ? 'text-primary' : 'text-darkslategray-100'*/}
+
+        {/*{!registered && (*/}
+        {/*  <div*/}
+        {/*    className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*      isRegister ? 'border-b-primary' : undefined*/}
         {/*    }`}*/}
         {/*  >*/}
-        {/*    Poster Session*/}
-        {/*  </Link>*/}
-        {/*  <span*/}
-        {/*    className={`${*/}
-        {/*      isPosterSession ? 'bg-secondary' : 'bg-darkslategray-100'*/}
-        {/*    } rounded-full border-2 px-1.5 py-0.5 text-[10px] font-bold text-white`}*/}
-        {/*  >*/}
-        {/*    Optional*/}
-        {/*  </span>*/}
-        {/*</div>*/}
-        {!registered && (
-          <div
-            className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-              isRegister ? 'border-b-primary' : undefined
-            }`}
-          >
-            <Image
-              width={24}
-              height={24}
-              className={`${
-                isRegister ? '' : undefined
-              } h-6 w-6 max-md:h-5 max-md:w-5`}
-              src="/source/TicketStar.svg"
-              alt=""
-            />
-            <Link
-              href="/dashboard/register"
-              className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-                isRegister ? 'text-primary' : 'text-darkslategray-100'
-              }`}
-            >
-              Registration
-            </Link>
-          </div>
-        )}
+        {/*    <Image*/}
+        {/*      width={24}*/}
+        {/*      height={24}*/}
+        {/*      className={`${*/}
+        {/*        isRegister ? '' : undefined*/}
+        {/*      } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*      src="/source/TicketStar.svg"*/}
+        {/*      alt=""*/}
+        {/*    />*/}
+        {/*    <Link*/}
+        {/*      href="/dashboard/register"*/}
+        {/*      className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*        isRegister ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*      }`}*/}
+        {/*    >*/}
+        {/*      Registration*/}
+        {/*    </Link>*/}
+        {/*  </div>*/}
+        {/*)}*/}
 
         {registered && (
           <div
@@ -130,31 +102,79 @@ export default function DashboardNavbar({
           </div>
         )}
 
-        {registered && (
-          <div
-            className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-              isStream ? 'border-b-primary' : undefined
+        <div
+          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+            isPosterSession ? 'border-b-primary' : undefined
+          }`}
+        >
+          <Image
+            width={24}
+            height={24}
+            className={`${
+              isPosterSession ? undefined : undefined
+            } h-6 w-6 max-md:h-5 max-md:w-5`}
+            src="/source/ic_wallpaper_48px.svg"
+            alt=""
+          />
+          <Link
+            href="/dashboard/posterSession"
+            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
+              isPosterSession ? 'text-primary' : 'text-darkslategray-100'
             }`}
           >
-            <Image
-              width={24}
-              height={24}
-              className={`${
-                isStream ? '' : undefined
-              } h-6 w-6 max-md:h-5 max-md:w-5`}
-              src="/source/stream.svg"
-              alt=""
-            />
-            <Link
-              href="/dashboard/stream"
-              className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-                isStream ? 'text-primary' : 'text-darkslategray-100'
-              }`}
-            >
-              Stream
-            </Link>
-          </div>
-        )}
+            CV
+          </Link>
+        </div>
+
+        <div
+          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+            isCareer ? 'border-b-primary' : undefined
+          }`}
+        >
+          <Image
+            width={24}
+            height={24}
+            className={`${
+              isCareer ? undefined : undefined
+            } h-6 w-6 max-md:h-5 max-md:w-5`}
+            src="/source/ic_wallpaper_48px.svg"
+            alt=""
+          />
+          <Link
+            href="/dashboard/career"
+            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
+              isCareer ? 'text-primary' : 'text-darkslategray-100'
+            }`}
+          >
+            Career
+          </Link>
+        </div>
+
+        {/*{registered && (*/}
+        {/*  <div*/}
+        {/*    className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*      isStream ? 'border-b-primary' : undefined*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    <Image*/}
+        {/*      width={24}*/}
+        {/*      height={24}*/}
+        {/*      className={`${*/}
+        {/*        isStream ? '' : undefined*/}
+        {/*      } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*      src="/source/stream.svg"*/}
+        {/*      alt=""*/}
+        {/*    />*/}
+        {/*    <Link*/}
+        {/*      href="/dashboard/stream"*/}
+        {/*      className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*        isStream ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*      }`}*/}
+        {/*    >*/}
+        {/*      Stream*/}
+        {/*    </Link>*/}
+        {/*  </div>*/}
+        {/*)}*/}
 
         {/*<div*/}
         {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}

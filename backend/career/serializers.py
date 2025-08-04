@@ -41,13 +41,13 @@ class ApplicationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Application
-        fields = ['id', 'position', 'cover_letter', 'created_at']
+        fields = ['id', 'position', 'created_at']
 
 
 class ApplicationCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Application
-        fields = ['position', 'cover_letter']
+        fields = ['position']
 
     def validate(self, attrs):
         user = self.context['request'].user

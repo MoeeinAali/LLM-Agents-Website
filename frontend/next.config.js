@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     serverActions: {
-      allowedOrigins: ['wss-sharif.com', '127.17.0.1:3000'],
+      allowedOrigins: ['llm-agents.ir', '127.0.0.1:3000'],
     },
   },
 };

@@ -1,3 +1,5 @@
+import { Pos } from '@jridgewell/gen-mapping/dist/types/types';
+
 export type Staff = {
   id: number;
   name: string;
@@ -185,4 +187,27 @@ export interface Group {
   name: string;
   secretKey: string;
   members: GroupMember[];
+}
+
+export interface Position {
+  id: number;
+  title: string;
+  markdown?: string;
+  brand?: {
+    name: string;
+    logo: string;
+  };
+}
+
+export interface Brand {
+  id: number;
+  name: string;
+  logo: string;
+  positions: Position[];
+}
+
+export interface Application {
+  id: number;
+  position: Position;
+  created_at: string;
 }
