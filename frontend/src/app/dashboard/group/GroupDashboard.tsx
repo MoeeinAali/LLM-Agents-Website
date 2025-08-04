@@ -76,7 +76,9 @@ export default function GroupDashboard({ group }: { group: Group }) {
 
   return (
     <>
-      <p className={"w-full text-center justify-center items-center text-2xl"}>You <b>cannot</b> Join a team now!</p>
+      <p className={'w-full items-center justify-center text-center text-2xl'}>
+        You <b>cannot</b> Join a team now!
+      </p>
       {/*/!* پیام‌های وضعیت *!/*/}
       {/*{!error && successful && (*/}
       {/*  <p className="w-full rounded-md bg-green-50 p-3 font-medium text-green-600">*/}
