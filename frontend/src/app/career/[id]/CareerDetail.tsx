@@ -37,10 +37,7 @@ export default async function CareerDetail({ id }: { id: string }) {
                     {data.title}
                   </p>
                   <hr className="my-6 border-black" />
-                  <MarkdownRenderer
-                    className={''}
-                    content={data.markdown}
-                  />
+                  <MarkdownRenderer className={''} content={data.markdown} />
 
                   <Link href={'/dashboard/career'}>
                     <button className="mx-auto flex h-[64px] items-center justify-center gap-2.5 self-stretch rounded-lg bg-primary px-8 py-0 text-xl font-bold not-italic leading-[normal] tracking-[-0.2px] text-white">

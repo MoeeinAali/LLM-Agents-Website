@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const MarkdownRenderer = ({ content, className , dir = "ltr"}) => {
+const MarkdownRenderer = ({ content, className, dir = 'ltr' }) => {
   return (
     <div
       dir={dir}

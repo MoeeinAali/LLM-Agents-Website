@@ -14,9 +14,9 @@ import CareerForm from '../../app/dashboard/career/CareerForm';
 export default async function CareerPage() {
   const positions = await getPositions();
   const authenticated = await isAuthenticated();
-  let applications = []
+  let applications = [];
   if (authenticated) {
-    applications = await getMyApplications()
+    applications = await getMyApplications();
   }
 
   return (
