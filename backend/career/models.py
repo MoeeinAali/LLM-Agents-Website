@@ -5,7 +5,7 @@ from participant.models import Participant
 
 class Brand(models.Model):
     name = models.CharField(unique=True, max_length=255)
-    logo = models.ImageField(upload_to='brands/logos/')
+    logo = models.ImageField(blank=True,upload_to='brands/logos/')
 
     def __str__(self):
         return self.name

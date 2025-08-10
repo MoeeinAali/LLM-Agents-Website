@@ -36,3 +36,30 @@ class MyApplicationsAPIView(generics.ListAPIView):
 class ApplyToPositionAPIView(generics.CreateAPIView):
     serializer_class = ApplicationCreateSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+from rest_framework import generics, permissions, serializers
+from rest_framework.response import Response
+from rest_framework import status
+
+
+class UnapplyFromPositionAPIView(generics.DestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    lookup_field = 'position_id'
+
+    def delete(self, request, *args, **kwargs):
+        user = request.user
+        try:
+            participant = Participant.objects.get(user=user)
+        except Participant.DoesNotExist:
+            return Response({"detail": "Participant not found."}, status=status.HTTP_400_BAD_REQUEST)
+
+        position_id = kwargs.get('position_id')
+
+        try:
+            application = Application.objects.get(participant=participant, position_id=position_id)
+        except Application.DoesNotExist:
+            return Response({"detail": "No application found for this position."}, status=status.HTTP_404_NOT_FOUND)
+
+        application.delete()
+        return Response({"detail": "Application withdrawn successfully."}, status=status.HTTP_204_NO_CONTENT)

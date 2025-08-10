@@ -75,12 +75,13 @@ export default function Navbar({ fixed = true, isAuthenticated = false }) {
             {/*  /!*  NEW*!/*/}
             {/*  /!*</span>*!/*/}
             {/*</Link>*/}
-            {/*<Link href="/timeline" className="relative block px-4 py-3">*/}
-            {/*  TimeLine*/}
-            {/*  /!*<span className="absolute -right-2 -top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">*!/*/}
-            {/*  /!*  NEW*!/*/}
-            {/*  /!*</span>*!/*/}
-            {/*</Link>*/}
+            <Link href="/career" className="relative block px-4 py-3">
+              Careers
+              <span className="absolute -right-2 -top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
+                NEW
+              </span>
+            </Link>
+
             <Link href="/about" className="block px-4 py-3">
               About Us
             </Link>

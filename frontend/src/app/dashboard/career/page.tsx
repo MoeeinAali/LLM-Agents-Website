@@ -25,7 +25,7 @@ export default async function CareerPanel() {
   return (
     <div className="space-y-7 p-6">
       {!isProfileComplete && <ProfileCompletionWarning />}
-      <CareerForm brands={positions} applications={applications} />
+      <CareerForm isAuthenticated={true} brands={positions} applications={applications} />
     </div>
   );
 }

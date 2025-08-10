@@ -8,11 +8,13 @@ interface Props {
   position: Position;
   isApplied: boolean;
   showButton: boolean;
+  accessToken?: string;
 }
 
 export default function PositionCard({
   position,
   isApplied,
+  accessToken = '',
   showButton,
 }: Props) {
   const [applied, setApplied] = useState(isApplied);
@@ -20,11 +22,18 @@ export default function PositionCard({
 
   const handleApply = async () => {
     setLoading(true);
-    const res = await fetch('/api/apply', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ position: position.id }),
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_ORIGIN}/api/career/applications/apply/`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ position: position.id }),
+      },
+    );
+    console.log(res);
 
     if (res.ok) {
       setApplied(true);
