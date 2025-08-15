@@ -14,7 +14,7 @@ export default function CertificateEntry({
   const addToLinkedIn = () => {
     const url = getLinkedInAddToProfileURL(
       plan,
-      30138631,
+      107341525,
       date,
       certificateUrl,
       uuid,

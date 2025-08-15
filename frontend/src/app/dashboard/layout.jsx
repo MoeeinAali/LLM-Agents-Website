@@ -1,17 +1,21 @@
-import Link from 'next/link';
-import { Tab } from '@headlessui/react';
 import { isAuthenticated } from '../../lib/auth';
 import Footer from '../../ui/components/Footer';
 import Navbar, { NavbarPlaceholder } from '../../ui/components/Navbar';
-import LogoutButton from '../../ui/components/dashboard/LogoutButton';
 import DashboardNavbar from './DashboardNavbar';
 import { fetchParticipation } from '../../lib/api/dashboard/register';
 import { fetchModesOfAttendance } from '../../lib/api/events/modeOfAttendance';
+import Login from '../login/page';
 
 export const revalidate = 3600;
 
 export default async function DashboardLayout({ children }) {
-  const authenticated = await isAuthenticated();
+  let authenticated = false;
+
+  try {
+    authenticated = await isAuthenticated();
+  } catch (error) {
+    return <Login />;
+  }
   const participation = await fetchParticipation();
   const modesOfAttendance = await fetchModesOfAttendance();
 

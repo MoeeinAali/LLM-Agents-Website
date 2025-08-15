@@ -76,34 +76,34 @@ export default function DashboardNavbar({
         {/*  </div>*/}
         {/*)}*/}
 
-        {registered && (
-          <div
-            className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
-              isGroup ? 'border-b-primary' : undefined
-            }`}
-          >
-            <Image
-              width={24}
-              height={24}
-              className={`${
-                isGroup ? '' : undefined
-              } h-6 w-6 max-md:h-5 max-md:w-5`}
-              src="/source/group.svg"
-              alt=""
-            />
-            <Link
-              href="/dashboard/group"
-              className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
-                isGroup ? 'text-primary' : 'text-darkslategray-100'
-              }`}
-            >
-              Group
-            </Link>
-          </div>
-        )}
+        {/*{registered && (*/}
+        {/*  <div*/}
+        {/*    className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
+        {/*      isGroup ? 'border-b-primary' : undefined*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    <Image*/}
+        {/*      width={24}*/}
+        {/*      height={24}*/}
+        {/*      className={`${*/}
+        {/*        isGroup ? '' : undefined*/}
+        {/*      } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
+        {/*      src="/source/group.svg"*/}
+        {/*      alt=""*/}
+        {/*    />*/}
+        {/*    <Link*/}
+        {/*      href="/dashboard/group"*/}
+        {/*      className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
+        {/*        isGroup ? 'text-primary' : 'text-darkslategray-100'*/}
+        {/*      }`}*/}
+        {/*    >*/}
+        {/*      Group*/}
+        {/*    </Link>*/}
+        {/*  </div>*/}
+        {/*)}*/}
 
         <div
-          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+          className={`flex relative items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
             isPosterSession ? 'border-b-primary' : undefined
           }`}
         >
@@ -116,6 +116,9 @@ export default function DashboardNavbar({
             src="/source/ic_wallpaper_48px.svg"
             alt=""
           />
+          <span className="absolute -right-4 top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
+                NEW
+              </span>
           <Link
             href="/dashboard/posterSession"
             className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
@@ -127,7 +130,7 @@ export default function DashboardNavbar({
         </div>
 
         <div
-          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+          className={`flex relative items-center justify-center gap-2 border-b-2 border-solid px-4 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
             isCareer ? 'border-b-primary' : undefined
           }`}
         >
@@ -140,6 +143,9 @@ export default function DashboardNavbar({
             src="/source/ic_wallpaper_48px.svg"
             alt=""
           />
+          <span className="absolute right-1 top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
+                NEW
+              </span>
           <Link
             href="/dashboard/career"
             className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
@@ -200,29 +206,29 @@ export default function DashboardNavbar({
         {/*  </Link>*/}
         {/*</div>*/}
 
-        {/*<div*/}
-        {/*  className={`flex items-center justify-center gap-2 border-b-2 border-solid px-6 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${*/}
-        {/*    isCertificates ? 'border-b-primary' : undefined*/}
-        {/*  }`}*/}
-        {/*>*/}
-        {/*  <Image*/}
-        {/*    width={24}*/}
-        {/*    height={24}*/}
-        {/*    className={`${*/}
-        {/*      isCertificates ? 'filter-primary' : undefined*/}
-        {/*    } h-6 w-6 max-md:h-5 max-md:w-5`}*/}
-        {/*    src="/source/certificate.svg"*/}
-        {/*    alt=""*/}
-        {/*  />*/}
-        {/*  <Link*/}
-        {/*    href="/dashboard/certificates"*/}
-        {/*    className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${*/}
-        {/*      isCertificates ? 'text-primary' : 'text-darkslategray-100'*/}
-        {/*    }`}*/}
-        {/*  >*/}
-        {/*    Certificates*/}
-        {/*  </Link>*/}
-        {/*</div>*/}
+        <div
+          className={`flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+            isCertificates ? 'border-b-primary' : undefined
+          }`}
+        >
+          <Image
+            width={24}
+            height={24}
+            className={`${
+              isCareer ? undefined : undefined
+            } h-6 w-6 max-md:h-5 max-md:w-5`}
+            src="/source/certificate.svg"
+            alt=""
+          />
+          <Link
+            href="/dashboard/certificates"
+            className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
+              isCertificates ? 'text-primary' : 'text-darkslategray-100'
+            }`}
+          >
+            Certificates
+          </Link>
+        </div>
       </div>
       <LogoutButton />
     </div>

@@ -10,13 +10,19 @@ import Timer from '../../ui/components/Timer';
 import Footer from '../../ui/components/Footer';
 import React from 'react';
 import CareerForm from '../../app/dashboard/career/CareerForm';
+import Login from '../login/page';
 
 export default async function CareerPage() {
   const positions = await getPositions();
-  const authenticated = await isAuthenticated();
   let applications = [];
-  if (authenticated) {
-    applications = await getMyApplications();
+  let authenticated = false;
+  try {
+    authenticated = await isAuthenticated();
+    if (authenticated) {
+      applications = await getMyApplications();
+    }
+  } catch (error) {
+    return <Login />;
   }
 
   return (

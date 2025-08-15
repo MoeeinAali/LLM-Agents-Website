@@ -10,7 +10,6 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/seminars', label: 'Seminars' },
   // { href: '/round-tables', label: 'Round Tables' },
-  // { href: '/poster-session', label: 'Poster Session' },
   // { href: '/timeline', label: 'TimeLine' },
   { href: '/about', label: 'About Us' },
 ];
@@ -142,12 +141,12 @@ export default function Navbar({ fixed = true, isAuthenticated = false }) {
               {label}
             </Link>
           ))}
-          {/*<Link href="/poster-session" className="relative block px-4 py-3">*/}
-          {/*  Poster Session*/}
-          {/*  <span className="absolute right-2 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">*/}
-          {/*    NEW*/}
-          {/*  </span>*/}
-          {/*</Link>*/}
+          <Link href="/career" className="relative block px-4 py-3">
+            Careers
+            <span className="absolute right-2 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
+              NEW
+            </span>
+          </Link>
         </aside>
       </div>
     </>
