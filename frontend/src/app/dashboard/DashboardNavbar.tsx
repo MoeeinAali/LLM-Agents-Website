@@ -103,7 +103,7 @@ export default function DashboardNavbar({
         {/*)}*/}
 
         <div
-          className={`flex relative items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+          className={`relative flex items-center justify-center gap-2 border-b-2 border-solid px-2 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
             isPosterSession ? 'border-b-primary' : undefined
           }`}
         >
@@ -117,8 +117,8 @@ export default function DashboardNavbar({
             alt=""
           />
           <span className="absolute -right-4 top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
-                NEW
-              </span>
+            NEW
+          </span>
           <Link
             href="/dashboard/posterSession"
             className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
@@ -130,7 +130,7 @@ export default function DashboardNavbar({
         </div>
 
         <div
-          className={`flex relative items-center justify-center gap-2 border-b-2 border-solid px-4 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
+          className={`relative flex items-center justify-center gap-2 border-b-2 border-solid px-4 py-5 max-md:gap-1 max-md:px-3 max-md:py-2 ${
             isCareer ? 'border-b-primary' : undefined
           }`}
         >
@@ -144,8 +144,8 @@ export default function DashboardNavbar({
             alt=""
           />
           <span className="absolute right-1 top-1 animate-pulse rounded-full border-2 bg-secondary px-1.5 py-0.5 text-[10px] font-bold text-white">
-                NEW
-              </span>
+            NEW
+          </span>
           <Link
             href="/dashboard/career"
             className={`text-xl font-semibold not-italic leading-normal tracking-[-0.2px] max-md:text-base ${
