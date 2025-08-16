@@ -10,7 +10,6 @@ import Timer from '../../ui/components/Timer';
 import Footer from '../../ui/components/Footer';
 import React from 'react';
 import CareerForm from '../../app/dashboard/career/CareerForm';
-import Login from '../login/page';
 
 export default async function CareerPage() {
   const positions = await getPositions();
@@ -22,7 +21,8 @@ export default async function CareerPage() {
       applications = await getMyApplications();
     }
   } catch (error) {
-    return <Login />;
+    applications = [];
+    authenticated = false;
   }
 
   return (
