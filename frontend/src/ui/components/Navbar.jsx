@@ -50,10 +50,10 @@ export default function Navbar({ fixed = true, isAuthenticated = false }) {
             </button>
             <Link href="/">
               <Image
-                className="mr-16 max-lg:w-[40.8px] lg:w-[58px]"
+                className="mr-16 max-lg:w-[70px] lg:w-[98px]"
                 src={'/source/logos/saic_.svg'}
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 alt={'SAIC'}
               />
             </Link>

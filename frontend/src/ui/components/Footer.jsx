@@ -44,7 +44,7 @@ export default function Footer() {
           </a>
           <a href="https://t.me/ai_sharif" target="_blank">
             <Image
-              src="/source/logos/saic.svg"
+              src="/source/logos/saic_.svg"
               alt="Sharif Artificial Intelligence Chapter"
               width="180"
               height="180"
