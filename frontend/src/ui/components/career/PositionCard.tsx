@@ -46,7 +46,7 @@ export default function PositionCard({
     <div className="flex flex-col items-end gap-3 rounded-lg border bg-white p-4 shadow-md">
       <div className="flex w-full items-center justify-start gap-3">
         <img
-          src={position.brand.logo}
+          src={`/source/sponsors/${position.brand.name}.png`}
           alt="Brand logo"
           className="w-24 border-2 object-contain"
         />
