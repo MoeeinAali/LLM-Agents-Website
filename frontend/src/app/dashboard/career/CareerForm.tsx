@@ -15,7 +15,7 @@ export default async function CareerForm({
   brands,
   applications,
   isAuthenticated,
-  API_ORIGIN = 'https://api.llm-agents.ir',
+  API_ORIGIN = 'https://api.llm-sharif.com',
 }: CareerFormProps) {
   const accessToken = await getAccessToken();
   const appliedPositionIds = new Set(

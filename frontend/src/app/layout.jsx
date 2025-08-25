@@ -36,22 +36,22 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://llm-agents.ir/preview.png?v=2"
+          content="https://llm-sharif.com/preview.png?v=2"
         />
-        <meta property="og:url" content="https://llm-agents.ir/" />
+        <meta property="og:url" content="https://llm-sharif.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="fa_IR" />
 
         {/*Twitter Meta Tags */}
         <meta name="twitter:site" content="WSS" />
-        <meta name="twitter:card" content="https://llm-agents.ir/preview.png" />
+        <meta name="twitter:card" content="https://llm-sharif.com/preview.png" />
         <meta name="twitter:title" content="LLM Agents Hackathon" />
         <meta name="twitter:description" content="LLM Agents Hackathon" />
         <meta
           name="twitter:image"
-          content="https://llm-agents.ir/preview.png"
+          content="https://llm-sharif.com/preview.png"
         />
-        <meta name="twitter:url" content="https://llm-agents.ir/" />
+        <meta name="twitter:url" content="https://llm-sharif.com/" />
         <Script
           async={true}
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}

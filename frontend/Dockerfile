@@ -26,10 +26,10 @@ COPY . .
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
-ENV API_ORIGIN https://api.llm-agents.ir
+ENV API_ORIGIN https://api.llm-sharif.com
 ENV SECRET_COOKIE_PASSWORD MEOWMEOW
 ENV GA_TRACKING_ID G-QCX3G9KSPC
-ENV NEXT_PUBLIC_ORIGIN https://llm-agents.ir
+ENV NEXT_PUBLIC_ORIGIN https://llm-sharif.com
 ENV WSS_ORDER 1
 RUN yarn build
 
