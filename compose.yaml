@@ -1,5 +1,6 @@
 networks:
   app-network:
+    name: shared-app-network
     driver: bridge
 
 services:
