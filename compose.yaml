@@ -19,7 +19,6 @@ services:
     container_name: payment
     networks:
       - app-network
-      - shared-app-network
     restart: on-failure
     env_file:
       - .env.payment
@@ -31,7 +30,6 @@ services:
     container_name: backend
     networks:
       - app-network
-      - shared-app-network
     depends_on:
       - postgresql
     ports:
